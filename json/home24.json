@@ -1,0 +1,4295 @@
+{
+    "resourceType": "articleCollection",
+    "articlesCount": 27834,
+    "_links": {
+        "self": {
+            "href": "https://api-mobile.home24.com/api/v1/articles?appDomain=1&locale=de_DE"
+        },
+        "articles": [
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-TS-AST-XPA-SHW?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-KAB-03-00411?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-GAD-000027?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-WO-000248?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-000025?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-02115-000356?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0570-09904-10004?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-060-0008?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-MU-000481?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-GA-000137?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-ACC-10-00029?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-02120-000082?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0231-09910-13085?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-02120-000036?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-01135-000161?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/S-TE-000009?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-010-0004?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-WO-000124?appDomain=1&locale=de_DE"
+            },
+            {
+                "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-060-0004?appDomain=1&locale=de_DE"
+            }
+        ],
+        "prev": {
+            "href": "https://api-mobile.home24.com/api/v1/articles?appDomain=1&locale=de_DE&offset=20&limit=20"
+        },
+        "next": {
+            "href": "https://api-mobile.home24.com/api/v1/articles?appDomain=1&locale=de_DE&offset=60&limit=20"
+        }
+    },
+    "_embedded": {
+        "filters": [
+            {
+                "values": [
+                    {
+                        "colorCode": "f5f5dc",
+                        "colorImage": "",
+                        "id": "beige",
+                        "priority": 0,
+                        "title": "Beige",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "0000ff",
+                        "colorImage": "",
+                        "id": "blue",
+                        "priority": 1,
+                        "title": "Blau",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "a52a2a",
+                        "colorImage": "",
+                        "id": "brown",
+                        "priority": 2,
+                        "title": "Braun",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ffff00",
+                        "colorImage": "",
+                        "id": "yellow",
+                        "priority": 3,
+                        "title": "Gelb",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ffd700",
+                        "colorImage": "",
+                        "id": "gold",
+                        "priority": 4,
+                        "title": "Gold",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "808080",
+                        "colorImage": "",
+                        "id": "gray",
+                        "priority": 5,
+                        "title": "Grau",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "008000",
+                        "colorImage": "",
+                        "id": "green",
+                        "priority": 6,
+                        "title": "Grün",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "https://cdn1.home24.net/static/skin/static/projects/mobile/images/colors/wood.png?interpolation=progressive-bicubic",
+                        "id": "timber",
+                        "priority": 7,
+                        "title": "Holz",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "",
+                        "id": "copper",
+                        "priority": 8,
+                        "title": "Kupfer",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "800080",
+                        "colorImage": "",
+                        "id": "purple",
+                        "priority": 9,
+                        "title": "Lila",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "https://cdn1.home24.net/static/skin/static/projects/mobile/images/colors/multicolor.png?interpolation=progressive-bicubic",
+                        "id": "multicolored",
+                        "priority": 10,
+                        "title": "Mehrfarbig",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "",
+                        "id": "brass",
+                        "priority": 11,
+                        "title": "Messing",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "https://cdn1.home24.net/static/skin/static/projects/mobile/images/colors/metal.png?interpolation=progressive-bicubic",
+                        "id": "metal",
+                        "priority": 12,
+                        "title": "Metallisch",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ffa500",
+                        "colorImage": "",
+                        "id": "orange",
+                        "priority": 13,
+                        "title": "Orange",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ffc0cb",
+                        "colorImage": "",
+                        "id": "pink",
+                        "priority": 14,
+                        "title": "Pink",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ff0000",
+                        "colorImage": "",
+                        "id": "red",
+                        "priority": 15,
+                        "title": "Rot",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "000000",
+                        "colorImage": "",
+                        "id": "black",
+                        "priority": 16,
+                        "title": "Schwarz",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "c0c0c0",
+                        "colorImage": "",
+                        "id": "silver",
+                        "priority": 17,
+                        "title": "Silber",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "",
+                        "colorImage": "https://cdn1.home24.net/static/skin/static/projects/mobile/images/colors/transparent.png?interpolation=progressive-bicubic",
+                        "id": "transparent",
+                        "priority": 18,
+                        "title": "Transparent",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "40e0d0",
+                        "colorImage": "",
+                        "id": "turquoise",
+                        "priority": 19,
+                        "title": "Türkis",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    },
+                    {
+                        "colorCode": "ffffff",
+                        "colorImage": "https://cdn1.home24.net/static/skin/static/projects/mobile/images/colors/white.png?interpolation=progressive-bicubic",
+                        "id": "white",
+                        "priority": 20,
+                        "title": "Weiß",
+                        "_metadata": {
+                            "type": "colorOption"
+                        }
+                    }
+                ],
+                "id": "color",
+                "priority": 0,
+                "title": "Farbe",
+                "_metadata": {
+                    "type": "color"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "other",
+                        "priority": 0,
+                        "title": "Andere",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "bamboo",
+                        "priority": 1,
+                        "title": "Bambus",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "realleather",
+                        "priority": 2,
+                        "title": "Echtleder",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "plumes",
+                        "priority": 3,
+                        "title": "Federn",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "fur",
+                        "priority": 4,
+                        "title": "Fell",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "glass",
+                        "priority": 5,
+                        "title": "Glas",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "glassandwood",
+                        "priority": 6,
+                        "title": "Glas & Holz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "glassandmetal",
+                        "priority": 7,
+                        "title": "Glas & Metall",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "wood",
+                        "priority": 8,
+                        "title": "Holz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "woodreplica",
+                        "priority": 9,
+                        "title": "Holznachbildung",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "woodenplate",
+                        "priority": 10,
+                        "title": "Holzplatte",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "woodsemisolid",
+                        "priority": 11,
+                        "title": "Holz teilmassiv",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "engineeredWood",
+                        "priority": 12,
+                        "title": "Holzwerkstoff",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rubber",
+                        "priority": 13,
+                        "title": "Kautschuk",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ceramic",
+                        "priority": 14,
+                        "title": "Keramik",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "basketwork",
+                        "priority": 15,
+                        "title": "Korbgeflecht",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "cork",
+                        "priority": 16,
+                        "title": "Kork",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "syntheticleather",
+                        "priority": 17,
+                        "title": "Kunstleder",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "plastic",
+                        "priority": 18,
+                        "title": "Kunststoff",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "solidwood",
+                        "priority": 19,
+                        "title": "Massivholz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mdf",
+                        "priority": 20,
+                        "title": "MDF",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "metal",
+                        "priority": 21,
+                        "title": "Metall",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "naturalfiber",
+                        "priority": 22,
+                        "title": "Naturfaser",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "paper",
+                        "priority": 23,
+                        "title": "Papier",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "polyrattan",
+                        "priority": 24,
+                        "title": "Polyrattan",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "porcelain",
+                        "priority": 25,
+                        "title": "Porzellan",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "qualitychipboard",
+                        "priority": 26,
+                        "title": "Qualitätsspanplatte",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rattan",
+                        "priority": 27,
+                        "title": "Rattan",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "stone",
+                        "priority": 28,
+                        "title": "Stein",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "fabricandleather",
+                        "priority": 29,
+                        "title": "Stoff & Leder",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "textile",
+                        "priority": 30,
+                        "title": "Textil",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "wax",
+                        "priority": 31,
+                        "title": "Wachs",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "material",
+                "priority": 1,
+                "title": "Material",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "basic",
+                        "priority": 0,
+                        "title": "Basic",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "classic",
+                        "priority": 1,
+                        "title": "Classic",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "comfort",
+                        "priority": 2,
+                        "title": "Comfort",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "global",
+                        "priority": 3,
+                        "title": "Ethnic",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "glamour",
+                        "priority": 4,
+                        "title": "Glamour",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "industrial",
+                        "priority": 5,
+                        "title": "Industrial",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "newCountry",
+                        "priority": 6,
+                        "title": "Landhaus",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "modernStyle",
+                        "priority": 7,
+                        "title": "Modern",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "nature",
+                        "priority": 8,
+                        "title": "Natur",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "scandinavian",
+                        "priority": 9,
+                        "title": "Skandi",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "minimalistic",
+                        "priority": 10,
+                        "title": "Urban",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "styleFilter",
+                "priority": 2,
+                "title": "Stil",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "h1",
+                        "priority": 0,
+                        "title": "H1",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "h2",
+                        "priority": 1,
+                        "title": "H2",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "h3",
+                        "priority": 2,
+                        "title": "H3",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "h4",
+                        "priority": 3,
+                        "title": "H4",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "h5",
+                        "priority": 4,
+                        "title": "H5",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "turnableH2H3",
+                        "priority": 5,
+                        "title": "Wendbar H2/H3",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "degreeOfHardness",
+                "priority": 3,
+                "title": "Härtegrad",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "asymmetrical",
+                        "priority": 0,
+                        "title": "Asymmetrisch",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "triangular",
+                        "priority": 1,
+                        "title": "Dreieckig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "crescent",
+                        "priority": 2,
+                        "title": "Halbmond",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "lshaped",
+                        "priority": 3,
+                        "title": "L-Form",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "oval",
+                        "priority": 4,
+                        "title": "Oval",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "square",
+                        "priority": 5,
+                        "title": "Quadratisch",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rectangular",
+                        "priority": 6,
+                        "title": "Rechteckig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "round",
+                        "priority": 7,
+                        "title": "Rund",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "other",
+                        "priority": 8,
+                        "title": "Sonstige",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "dropshaped",
+                        "priority": 9,
+                        "title": "Tropfenförmig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ushape",
+                        "priority": 10,
+                        "title": "U-Form",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "cylindrical",
+                        "priority": 11,
+                        "title": "Zylindrisch",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "shape",
+                "priority": 4,
+                "title": "Form",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "5zones",
+                        "priority": 0,
+                        "title": "5-Zonen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "7zones",
+                        "priority": 1,
+                        "title": "7-Zonen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "dynamic",
+                        "priority": 2,
+                        "title": "Dynamische Zonenbildung",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "comfortZones",
+                "priority": 5,
+                "title": "Liegezonen",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "lockable",
+                        "priority": 0,
+                        "title": "Abschließbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rotating",
+                        "priority": 1,
+                        "title": "Drehbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "energiesaving",
+                        "priority": 2,
+                        "title": "Energiesparend",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "expandable",
+                        "priority": 3,
+                        "title": "Erweiterbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "heightadjustable",
+                        "priority": 4,
+                        "title": "Höhenverstellbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "heightadjustablearmrest",
+                        "priority": 5,
+                        "title": "Höhenverstellbare Armlehnen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "heightadjustablelowershelf",
+                        "priority": 6,
+                        "title": "Höhenverstellbare Fachböden",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "folding",
+                        "priority": 7,
+                        "title": "Klappbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "slattedframeandmattress",
+                        "priority": 8,
+                        "title": "Lattenrost & Matratze inklusive",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "slattedframe",
+                        "priority": 9,
+                        "title": "Lattenrost inklusive",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withattachedboard",
+                        "priority": 10,
+                        "title": "Mit Ansteckplatten",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "witharmrest",
+                        "priority": 11,
+                        "title": "Mit Armlehnen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withcontainer",
+                        "priority": 12,
+                        "title": "Mit Container",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withintegratedlighting",
+                        "priority": 13,
+                        "title": "Mit integrierter Beleuchtung",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withtopmoveout",
+                        "priority": 14,
+                        "title": "Mit Kopfauszug",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withwreathblende",
+                        "priority": 15,
+                        "title": "Mit Kranzblende",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withladder",
+                        "priority": 16,
+                        "title": "Mit Leiter",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withlighteffect",
+                        "priority": 17,
+                        "title": "Mit Lichteffekt",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withmiddlemoveout",
+                        "priority": 18,
+                        "title": "Mit Mittelauszug",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withpassepartoutframe",
+                        "priority": 19,
+                        "title": "Mit Passepartoutrahmen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withrolles",
+                        "priority": 20,
+                        "title": "Mit Rollen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withslide",
+                        "priority": 21,
+                        "title": "Mit Rutsche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withdrawer",
+                        "priority": 22,
+                        "title": "Mit Schubladen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withmirror",
+                        "priority": 23,
+                        "title": "Mit Spiegel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withstowage",
+                        "priority": 24,
+                        "title": "Mit Stauraum",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withfabricconfiguration",
+                        "priority": 25,
+                        "title": "Mit textiler Ausstattung",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withtower",
+                        "priority": 26,
+                        "title": "Mit Turm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withdoors",
+                        "priority": 27,
+                        "title": "Mit Türen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "inclinabletabletop",
+                        "priority": 28,
+                        "title": "Neigbare Tischplatte",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withoutarmrest",
+                        "priority": 29,
+                        "title": "Ohne Armlehnen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rolling",
+                        "priority": 30,
+                        "title": "Rollbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "withcupboardlighting",
+                        "priority": 31,
+                        "title": "Schrankbeleuchtung inklusive",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "swiveling",
+                        "priority": 32,
+                        "title": "Schwenkbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "stackable",
+                        "priority": 33,
+                        "title": "Stapelbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "additionalinterior",
+                        "priority": 34,
+                        "title": "Zusätliche Innenausstattung verfügbar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "specialCharacteristics",
+                "priority": 6,
+                "title": "Extras",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "maple",
+                        "priority": 0,
+                        "title": "Ahorn",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "acacia",
+                        "priority": 1,
+                        "title": "Akazie",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "branchoak",
+                        "priority": 2,
+                        "title": "Asteiche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "bamboo",
+                        "priority": 3,
+                        "title": "Bambus",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "birch",
+                        "priority": 4,
+                        "title": "Birke",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "book",
+                        "priority": 5,
+                        "title": "Buche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ebony",
+                        "priority": 6,
+                        "title": "Ebenholz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "oak",
+                        "priority": 7,
+                        "title": "Eiche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "oakBianco",
+                        "priority": 8,
+                        "title": "Eiche Bianco",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "alder",
+                        "priority": 9,
+                        "title": "Erle",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ash-tree",
+                        "priority": 10,
+                        "title": "Esche1",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ashdark",
+                        "priority": 11,
+                        "title": "Esche Dunkel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "eucalyptus",
+                        "priority": 12,
+                        "title": "Eukalyptus",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "spruce",
+                        "priority": 13,
+                        "title": "Fichte",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "gumTree",
+                        "priority": 14,
+                        "title": "Gummibaum",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "chestnutTree",
+                        "priority": 15,
+                        "title": "Kastanie",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "corebeech",
+                        "priority": 16,
+                        "title": "Kernbuche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "pine",
+                        "priority": 17,
+                        "title": "Kiefer",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "pineNature",
+                        "priority": 18,
+                        "title": "Kiefer Natur",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "cherry",
+                        "priority": 19,
+                        "title": "Kirsche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "linden",
+                        "priority": 20,
+                        "title": "Linde",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "larch",
+                        "priority": 21,
+                        "title": "Lärche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mahogany",
+                        "priority": 22,
+                        "title": "Mahagoni",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mango",
+                        "priority": 23,
+                        "title": "Mango",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "nuttree",
+                        "priority": 24,
+                        "title": "Nussbaum",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "walnutgrey",
+                        "priority": 25,
+                        "title": "Nussbaum Grau",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "jacaranda",
+                        "priority": 26,
+                        "title": "Palisander",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "poplar",
+                        "priority": 27,
+                        "title": "Pappel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "paulownia",
+                        "priority": 28,
+                        "title": "Paulownia",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "pinetree",
+                        "priority": 29,
+                        "title": "Pinie",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "robinia",
+                        "priority": 30,
+                        "title": "Robinie",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "sheesham",
+                        "priority": 31,
+                        "title": "Sheesham",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "fir",
+                        "priority": 32,
+                        "title": "Tanne",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "teak",
+                        "priority": 33,
+                        "title": "Teakholz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "tulipTree",
+                        "priority": 34,
+                        "title": "Tulpenbaum",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "elm",
+                        "priority": 35,
+                        "title": "Ulme",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "walnut",
+                        "priority": 36,
+                        "title": "Walnuss",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "pasture",
+                        "priority": 37,
+                        "title": "Weide",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "wenge",
+                        "priority": 38,
+                        "title": "Wenge",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "wildOak",
+                        "priority": 39,
+                        "title": "Wildeiche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "rootWood",
+                        "priority": 40,
+                        "title": "Wurzelholz",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "plum",
+                        "priority": 41,
+                        "title": "Zwetschge",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "wood",
+                "priority": 7,
+                "title": "Holzart/Dekor",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": 0,
+                        "priority": 0,
+                        "title": "0",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "priority": 1,
+                        "title": "1",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "suitableForAllergySuffers",
+                "priority": 8,
+                "title": "Allergiker",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "40 x 90cm",
+                        "priority": 0,
+                        "title": "40 x 90cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "60 x 120cm",
+                        "priority": 1,
+                        "title": "60 x 120cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "70 x 140cm",
+                        "priority": 2,
+                        "title": "70 x 140cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "70 x 200cm",
+                        "priority": 3,
+                        "title": "70 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "75 x 150 cm",
+                        "priority": 4,
+                        "title": "75 x 150 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "75 x 200cm",
+                        "priority": 5,
+                        "title": "75 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "80 x 190cm",
+                        "priority": 6,
+                        "title": "80 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "80 x 200cm",
+                        "priority": 7,
+                        "title": "80 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "80 x 210cm",
+                        "priority": 8,
+                        "title": "80 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "80 x 220cm",
+                        "priority": 9,
+                        "title": "80 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "86 x 205cm",
+                        "priority": 10,
+                        "title": "86 x 205cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "90 x 150 cm",
+                        "priority": 11,
+                        "title": "90 x 150 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "90 x 190cm",
+                        "priority": 12,
+                        "title": "90 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "90 x 200cm",
+                        "priority": 13,
+                        "title": "90 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "90 x 210cm",
+                        "priority": 14,
+                        "title": "90 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "90 x 220cm",
+                        "priority": 15,
+                        "title": "90 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "100 x 190cm",
+                        "priority": 16,
+                        "title": "100 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "100 x 200cm",
+                        "priority": 17,
+                        "title": "100 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "100 x 210cm",
+                        "priority": 18,
+                        "title": "100 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "100 x 220cm",
+                        "priority": 19,
+                        "title": "100 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "110 x 190cm",
+                        "priority": 20,
+                        "title": "110 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "110 x 205cm",
+                        "priority": 21,
+                        "title": "110 x 205cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "110 x 210cm",
+                        "priority": 22,
+                        "title": "110 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "110 x 220cm",
+                        "priority": 23,
+                        "title": "110 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "120 x 190cm",
+                        "priority": 24,
+                        "title": "120 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "120 x 195cm",
+                        "priority": 25,
+                        "title": "120 x 195cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "120 x 200cm",
+                        "priority": 26,
+                        "title": "120 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "120 x 210cm",
+                        "priority": 27,
+                        "title": "120 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "120 x 220cm",
+                        "priority": 28,
+                        "title": "120 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "130 x 190 cm",
+                        "priority": 29,
+                        "title": "130 x 190 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "130 x 200cm",
+                        "priority": 30,
+                        "title": "130 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "130 x 210 cm",
+                        "priority": 31,
+                        "title": "130 x 210 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "130 x 210cm",
+                        "priority": 32,
+                        "title": "130 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "130 x 220cm",
+                        "priority": 33,
+                        "title": "130 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "135 x 220 cm",
+                        "priority": 34,
+                        "title": "135 x 220 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 190cm",
+                        "priority": 35,
+                        "title": "140 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 195cm",
+                        "priority": 36,
+                        "title": "140 x 195cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 200cm",
+                        "priority": 37,
+                        "title": "140 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 205 cm",
+                        "priority": 38,
+                        "title": "140 x 205 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 210cm",
+                        "priority": 39,
+                        "title": "140 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "140 x 220cm",
+                        "priority": 40,
+                        "title": "140 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "150 x 200cm",
+                        "priority": 41,
+                        "title": "150 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "150 x 220cm",
+                        "priority": 42,
+                        "title": "150 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "160 x 190cm",
+                        "priority": 43,
+                        "title": "160 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "160 x 200cm",
+                        "priority": 44,
+                        "title": "160 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "160 x 205 cm",
+                        "priority": 45,
+                        "title": "160 x 205 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "160 x 210cm",
+                        "priority": 46,
+                        "title": "160 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "160 x 220cm",
+                        "priority": 47,
+                        "title": "160 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "180 x 190cm",
+                        "priority": 48,
+                        "title": "180 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "180 x 200cm",
+                        "priority": 49,
+                        "title": "180 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "180 x 210cm",
+                        "priority": 50,
+                        "title": "180 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "180 x 220cm",
+                        "priority": 51,
+                        "title": "180 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "190 x 200cm",
+                        "priority": 52,
+                        "title": "190 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "200 x 190cm",
+                        "priority": 53,
+                        "title": "200 x 190cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "200 x 200cm",
+                        "priority": 54,
+                        "title": "200 x 200cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "200 x 210cm",
+                        "priority": 55,
+                        "title": "200 x 210cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "200 x 220cm",
+                        "priority": 56,
+                        "title": "200 x 220cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "bedSize",
+                "priority": 9,
+                "title": "Liegefläche",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "1door",
+                        "priority": 0,
+                        "title": "1-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "2door",
+                        "priority": 1,
+                        "title": "2-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "3door",
+                        "priority": 2,
+                        "title": "3-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "4door",
+                        "priority": 3,
+                        "title": "4-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "5door",
+                        "priority": 4,
+                        "title": "5-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "6door",
+                        "priority": 5,
+                        "title": "6-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "7door",
+                        "priority": 6,
+                        "title": "7-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "8door",
+                        "priority": 7,
+                        "title": "8-türig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "numberCabinetDoors",
+                "priority": 10,
+                "title": "Türen",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "2people",
+                        "priority": 0,
+                        "title": "2 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "2to4people",
+                        "priority": 1,
+                        "title": "2-4 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "4to6people",
+                        "priority": 2,
+                        "title": "4-6 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "6to8people",
+                        "priority": 3,
+                        "title": "6-8 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "8to10people",
+                        "priority": 4,
+                        "title": "8-10 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "10to12people",
+                        "priority": 5,
+                        "title": "10-12 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "over12people",
+                        "priority": 6,
+                        "title": "Mehr als 12 Personen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "numberOfPeopleAtTable",
+                "priority": 11,
+                "title": "Personenzahl",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "extensionplates",
+                        "priority": 0,
+                        "title": "Ansteckplatten",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "nofunction",
+                        "priority": 1,
+                        "title": "Keine Funktion",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "headextract",
+                        "priority": 2,
+                        "title": "Kopfauszug",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mediumextract",
+                        "priority": 3,
+                        "title": "Mittelauszug",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "functionDesk",
+                "priority": 12,
+                "title": "Funktion Tisch",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "4cm",
+                        "priority": 0,
+                        "title": "4 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "6cm",
+                        "priority": 1,
+                        "title": "6 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "11cmto15cm",
+                        "priority": 2,
+                        "title": "11 bis 15 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "12cm",
+                        "priority": 3,
+                        "title": "12 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "14cm",
+                        "priority": 4,
+                        "title": "14 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "16cmto20cm",
+                        "priority": 5,
+                        "title": "16 bis 20 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "18cm",
+                        "priority": 6,
+                        "title": "18 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "20cm",
+                        "priority": 7,
+                        "title": "20 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "21cmto25cm",
+                        "priority": 8,
+                        "title": "21 bis 25 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "to10cm",
+                        "priority": 9,
+                        "title": "Bis 10 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "about25cm",
+                        "priority": 10,
+                        "title": "über 25 cm",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "coreHeight",
+                "priority": 13,
+                "title": "Kernhöhe",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "breathable",
+                        "priority": 0,
+                        "title": "Atmungsaktiv",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ergonomically",
+                        "priority": 1,
+                        "title": "Ergonomische Anpassung",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "adjustableframe",
+                        "priority": 2,
+                        "title": "Für verstellbare Lattenrahmen geeignet",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "climate",
+                        "priority": 3,
+                        "title": "Klimatisierend",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "pointelasticity",
+                        "priority": 4,
+                        "title": "Punktelastisch",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "temperatureCompensating",
+                        "priority": 5,
+                        "title": "Temperaturausgleichend",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "thermallyinsulating",
+                        "priority": 6,
+                        "title": "Wärmeisolierend",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "characteristicMattress",
+                "priority": 14,
+                "title": "Eigenschaften",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "values": [
+                    {
+                        "id": "Action",
+                        "priority": 0,
+                        "title": "Action",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Apelt",
+                        "priority": 1,
+                        "title": "Apelt",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "ars manufacti",
+                        "priority": 2,
+                        "title": "ars manufacti",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Ars Natura",
+                        "priority": 3,
+                        "title": "Ars Natura",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Astra",
+                        "priority": 4,
+                        "title": "Astra",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "BeCo",
+                        "priority": 5,
+                        "title": "BeCo",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Beddinghouse",
+                        "priority": 6,
+                        "title": "Beddinghouse",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Best Freizeitmöbel",
+                        "priority": 7,
+                        "title": "Best Freizeitmöbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Breckle",
+                        "priority": 8,
+                        "title": "Breckle",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Brilliant",
+                        "priority": 9,
+                        "title": "Brilliant",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "chillout by Franz Fertig",
+                        "priority": 10,
+                        "title": "chillout by Franz Fertig",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Cotta",
+                        "priority": 11,
+                        "title": "Cotta",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Dekoria",
+                        "priority": 12,
+                        "title": "Dekoria",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Dormisette",
+                        "priority": 13,
+                        "title": "Dormisette",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "easyOffice by Paperflow",
+                        "priority": 14,
+                        "title": "easyOffice by Paperflow",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Eglo",
+                        "priority": 15,
+                        "title": "Eglo",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Elobra",
+                        "priority": 16,
+                        "title": "Elobra",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Eva Padberg Collection",
+                        "priority": 17,
+                        "title": "Eva Padberg Collection",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Express Möbel",
+                        "priority": 18,
+                        "title": "Express Möbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "f.a.n.",
+                        "priority": 19,
+                        "title": "f.a.n.",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Fackelmann",
+                        "priority": 20,
+                        "title": "Fackelmann",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Fredriks",
+                        "priority": 21,
+                        "title": "Fredriks",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "fresh to go",
+                        "priority": 22,
+                        "title": "fresh to go",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Gazzda",
+                        "priority": 23,
+                        "title": "Gazzda",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Germania",
+                        "priority": 24,
+                        "title": "Germania",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Gerster",
+                        "priority": 25,
+                        "title": "Gerster",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Giessbach",
+                        "priority": 26,
+                        "title": "Giessbach",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Globo Lighting",
+                        "priority": 27,
+                        "title": "Globo Lighting",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Grand Selection",
+                        "priority": 28,
+                        "title": "Grand Selection",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Hanse Home Collection",
+                        "priority": 29,
+                        "title": "Hanse Home Collection",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Hans Kögl",
+                        "priority": 30,
+                        "title": "Hans Kögl",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Hn8 Schlafsysteme",
+                        "priority": 31,
+                        "title": "Hn8 Schlafsysteme",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "home24",
+                        "priority": 32,
+                        "title": "home24",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Home24Deko",
+                        "priority": 33,
+                        "title": "Home24Deko",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Home Design",
+                        "priority": 34,
+                        "title": "Home Design",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Honsel",
+                        "priority": 35,
+                        "title": "Honsel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "indeko",
+                        "priority": 36,
+                        "title": "indeko",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Innovation Möbel",
+                        "priority": 37,
+                        "title": "Innovation Möbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Irisette",
+                        "priority": 38,
+                        "title": "Irisette",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Jack & Alice",
+                        "priority": 39,
+                        "title": "Jack & Alice",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "KINX",
+                        "priority": 40,
+                        "title": "KINX",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "KIYDOO",
+                        "priority": 41,
+                        "title": "KIYDOO",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Konstsmide",
+                        "priority": 42,
+                        "title": "Konstsmide",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "LC Mobili",
+                        "priority": 43,
+                        "title": "LC Mobili",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Leonardo",
+                        "priority": 44,
+                        "title": "Leonardo",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "loftscape",
+                        "priority": 45,
+                        "title": "loftscape",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Loistaa",
+                        "priority": 46,
+                        "title": "Loistaa",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Maison Belfort",
+                        "priority": 47,
+                        "title": "Maison Belfort",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Maja Möbel",
+                        "priority": 48,
+                        "title": "Maja Möbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Max Winzer",
+                        "priority": 49,
+                        "title": "Max Winzer",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "meise.möbel",
+                        "priority": 50,
+                        "title": "meise.möbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Monaco",
+                        "priority": 51,
+                        "title": "Monaco",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mooved",
+                        "priority": 52,
+                        "title": "mooved",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "mydeco",
+                        "priority": 53,
+                        "title": "mydeco",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "My Flair",
+                        "priority": 54,
+                        "title": "My Flair",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Mørteens",
+                        "priority": 55,
+                        "title": "Mørteens",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Naturoo",
+                        "priority": 56,
+                        "title": "Naturoo",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Netfurn by GWINNER",
+                        "priority": 57,
+                        "title": "Netfurn by GWINNER",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Nino Leuchten",
+                        "priority": 58,
+                        "title": "Nino Leuchten",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Nordlux",
+                        "priority": 59,
+                        "title": "Nordlux",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Nuovoform",
+                        "priority": 60,
+                        "title": "Nuovoform",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Näve",
+                        "priority": 61,
+                        "title": "Näve",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Parwis",
+                        "priority": 62,
+                        "title": "Parwis",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Paul Neuhaus",
+                        "priority": 63,
+                        "title": "Paul Neuhaus",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Pelipal",
+                        "priority": 64,
+                        "title": "Pelipal",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Pinolino",
+                        "priority": 65,
+                        "title": "Pinolino",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Rauch Pack´s",
+                        "priority": 66,
+                        "title": "Rauch Pack´s",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Rauch Select",
+                        "priority": 67,
+                        "title": "Rauch Select",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Rauch Steffen",
+                        "priority": 68,
+                        "title": "Rauch Steffen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "re:concept",
+                        "priority": 69,
+                        "title": "re:concept",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Red Living",
+                        "priority": 70,
+                        "title": "Red Living",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Relita",
+                        "priority": 71,
+                        "title": "Relita",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Ridgevalley",
+                        "priority": 72,
+                        "title": "Ridgevalley",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Roba",
+                        "priority": 73,
+                        "title": "Roba",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "roomscape",
+                        "priority": 74,
+                        "title": "roomscape",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Safavieh",
+                        "priority": 75,
+                        "title": "Safavieh",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Schardt",
+                        "priority": 76,
+                        "title": "Schardt",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Schildmeyer",
+                        "priority": 77,
+                        "title": "Schildmeyer",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Schöner Wohnen Kollektion",
+                        "priority": 78,
+                        "title": "Schöner Wohnen Kollektion",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "SKØP",
+                        "priority": 79,
+                        "title": "SKØP",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Steens",
+                        "priority": 80,
+                        "title": "Steens",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Studio Copenhagen",
+                        "priority": 81,
+                        "title": "Studio Copenhagen",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Tenzo",
+                        "priority": 82,
+                        "title": "Tenzo",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "THEKO die markenteppiche",
+                        "priority": 83,
+                        "title": "THEKO die markenteppiche",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Ticaa",
+                        "priority": 84,
+                        "title": "Ticaa",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Tom Tailor",
+                        "priority": 85,
+                        "title": "Tom Tailor",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Top Square",
+                        "priority": 86,
+                        "title": "Top Square",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Topstar",
+                        "priority": 87,
+                        "title": "Topstar",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Trendteam",
+                        "priority": 88,
+                        "title": "Trendteam",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Trio",
+                        "priority": 89,
+                        "title": "Trio",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "vario",
+                        "priority": 90,
+                        "title": "vario",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Vipack",
+                        "priority": 91,
+                        "title": "Vipack",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Voss",
+                        "priority": 92,
+                        "title": "Voss",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Wellemöbel",
+                        "priority": 93,
+                        "title": "Wellemöbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "WENKO",
+                        "priority": 94,
+                        "title": "WENKO",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Wiemann",
+                        "priority": 95,
+                        "title": "Wiemann",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Wimex",
+                        "priority": 96,
+                        "title": "Wimex",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Wofi",
+                        "priority": 97,
+                        "title": "Wofi",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Wolf-Möbel",
+                        "priority": 98,
+                        "title": "Wolf-Möbel",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    },
+                    {
+                        "id": "Zuiver",
+                        "priority": 99,
+                        "title": "Zuiver",
+                        "_metadata": {
+                            "type": "option"
+                        }
+                    }
+                ],
+                "id": "brand.title",
+                "priority": 15,
+                "title": "Marke",
+                "_metadata": {
+                    "type": "collection"
+                }
+            },
+            {
+                "min": 0,
+                "max": 1000,
+                "currentMin": 0,
+                "currentMax": 1000,
+                "unit": "cm",
+                "id": "width",
+                "priority": 16,
+                "title": "Breite (cm)",
+                "_metadata": {
+                    "type": "range"
+                }
+            },
+            {
+                "min": 0,
+                "max": 365,
+                "currentMin": 0,
+                "currentMax": 365,
+                "unit": "cm",
+                "id": "height",
+                "priority": 17,
+                "title": "Höhe (cm)",
+                "_metadata": {
+                    "type": "range"
+                }
+            },
+            {
+                "min": 0,
+                "max": 1000,
+                "currentMin": 0,
+                "currentMax": 1000,
+                "unit": "cm",
+                "id": "depth",
+                "priority": 18,
+                "title": "Tiefe (cm)",
+                "_metadata": {
+                    "type": "range"
+                }
+            },
+            {
+                "min": 0,
+                "max": 6200,
+                "currentMin": 0,
+                "currentMax": 619999,
+                "id": "price.amount",
+                "priority": 19,
+                "title": "Preise",
+                "_metadata": {
+                    "type": "range"
+                }
+            },
+            {
+                "min": 0,
+                "max": 185,
+                "currentMin": 0,
+                "currentMax": 185,
+                "unit": "Tage",
+                "id": "delivery.time.amount",
+                "priority": 20,
+                "title": "Lieferzeitraum",
+                "_metadata": {
+                    "type": "range"
+                }
+            }
+        ],
+        "articles": [
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "560.00",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "3",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Topstar",
+                    "logo": [
+                        "/topstar.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/x/p/x-pander-drehstuhl-schwarz-4457412.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-TS-AST-XPA-SHW",
+                "title": "X-Pander Drehstuhl",
+                "price": {
+                    "amount": "219.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-TS-AST-XPA-SHW?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Mørteens",
+                    "logo": [
+                        "/m-rteens-4360540.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/w/o/wohnlandschaft-sola-flachgewebe-longchair-davorstehend-links-ottomane-rechts-mit-schlaffunktion-grau-4817760.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-KAB-03-00411",
+                "title": "Wohnlandschaft Sola Flachgewebe",
+                "price": {
+                    "amount": "999.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-KAB-03-00411?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/t/v/tv-lowboard-grasby-ii-altholz-pinie-metall-pinie-dunkel-schwarz-4884728.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-GAD-000027",
+                "title": "TV-Lowboard Grasby II",
+                "price": {
+                    "amount": "549.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-GAD-000027?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "26",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Wolf-Möbel",
+                    "logo": [
+                        "/wolf-moebel-3435137.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/i/sitzbank-goa-akazie-mango-teilmassiv-mehrfarbig-3435201.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-WO-000248",
+                "title": "Sitzbank Goa",
+                "price": {
+                    "amount": "199.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-WO-000248?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/w/o/wohnwand-manchester-i-3-teilig-akazie-teilmassiv-metall-akazie-anthrazit-4874584.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0513-000025",
+                "title": "Wohnwand Manchester I (3-teilig)",
+                "price": {
+                    "amount": "1379.97",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-000025?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "1129.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Studio Copenhagen",
+                    "logo": [
+                        "/studio-copenhagen-3251245.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/c/schlafsofa-copperfield-ii-webstoff-stoff-parsa-beige-grau-3964504.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-02115-000356",
+                "title": "Schlafsofa Copperfield II Webstoff",
+                "price": {
+                    "amount": "999.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-02115-000356?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "1049.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Ars Natura",
+                    "logo": [
+                        "/ars-natura-4360524.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/g/a/gartentisch-calla-millor-akazie-massiv-1741338.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0570-09904-10004",
+                "title": "Gartentisch Calla Millor III",
+                "price": {
+                    "amount": "699.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0570-09904-10004?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/r/e/regal-manchester-vi-anthrazit-akazie-dekor-4877280.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0513-04-060-0008",
+                "title": "Regal Manchester VI",
+                "price": {
+                    "amount": "599.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-060-0008?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "349.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "3",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "loftscape",
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/c/schwingstuhl-marco-2er-set-kunstleder-braun-4486952.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-MU-000481",
+                "title": "Freischwinger Marco (2er-Set)",
+                "price": {
+                    "amount": "299.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-MU-000481?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/l/o/lowboard-tamati-ii-pinie-massiv-4921956.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-GA-000137",
+                "title": "Lowboard Tamati II",
+                "price": {
+                    "amount": "399.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-GA-000137?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "3",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Studio Copenhagen",
+                    "logo": [
+                        "/studio-copenhagen-3251245.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/e/sessel-montola-kunstleder-cognac-chrom-5087444.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-ACC-10-00029",
+                "title": "Sessel Montola Kunstleder Cognac",
+                "price": {
+                    "amount": "149.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-ACC-10-00029?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Studio Copenhagen",
+                    "logo": [
+                        "/studio-copenhagen-3251245.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/t/v/tv-lowboard-payara-walnuss-schwarz-4372756.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-02120-000082",
+                "title": "TV-Lowboard Payara",
+                "price": {
+                    "amount": "699.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-02120-000082?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "529.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Fredriks",
+                    "logo": [
+                        "/fredriks-4360528.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/o/sonnenliege-paradise-lounge-polyrattan-grau-361246.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0231-09910-13085",
+                "title": "Sonnenliege Paradise Lounge",
+                "price": {
+                    "amount": "299.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0231-09910-13085?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": {
+                    "amount": "199.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "3",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Mørteens",
+                    "logo": [
+                        "/m-rteens-4360540.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/n/a/nachttisch-dahlia-weiss-3540053.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-02120-000036",
+                "title": "Nachtkommode Dahlia",
+                "price": {
+                    "amount": "129.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-02120-000036?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "28",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Studio Copenhagen",
+                    "logo": [
+                        "/studio-copenhagen-3251245.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/s/i/sideboard-loca-ii-eiche-teilmassiv-weiss-wildeiche-135-cm-5209124.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-01135-000161",
+                "title": "Sideboard Loca II",
+                "price": {
+                    "amount": "1299.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-01135-000161?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/t/v/tv-lowboard-valenje-ii-eiche-massiv-metall-eiche-schwarz-4444352.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "S-TE-000009",
+                "title": "TV-Lowboard Valenje II",
+                "price": {
+                    "amount": "599.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/S-TE-000009?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "weeks",
+                        "amount": "9",
+                        "units": "days"
+                    },
+                    "type": "furnitureshipping",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/l/o/lowboard-manchester-ii-akazie-massiv-metall-4882964.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0513-04-010-0004",
+                "title": "Lowboard Manchester II",
+                "price": {
+                    "amount": "499.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-010-0004?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "4",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "Wolf-Möbel",
+                    "logo": [
+                        "/wolf-moebel-3435137.gif"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/g/a/garderobenbank-goa-akazie-mango-teilmassiv-mehrfarbig-4997980.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-WO-000124",
+                "title": "Garderobenbank Goa",
+                "price": {
+                    "amount": "199.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-WO-000124?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            },
+            {
+                "description": null,
+                "prevPrice": null,
+                "manufacturePrice": null,
+                "delivery": {
+                    "time": {
+                        "renderAs": "days",
+                        "amount": "4",
+                        "units": "days"
+                    },
+                    "type": "parcelservice",
+                    "terms": null,
+                    "deliveredBy": null,
+                    "text": "",
+                    "typeLabelLink": ""
+                },
+                "brand": {
+                    "id": "",
+                    "title": "ars manufacti",
+                    "logo": [
+                        "/ars-manufacti-4360520.png"
+                    ],
+                    "description": ""
+                },
+                "media": [
+                    {
+                        "uri": "https://cdn1.home24.net/resized/media/catalog/product/r/e/regal-manchester-iv-akazie-massiv-metall-4877360.png?output-format=jpg&interpolation=progressive-bicubic",
+                        "mimeType": "image/png",
+                        "type": null,
+                        "priority": 0,
+                        "size": null
+                    }
+                ],
+                "assemblyService": null,
+                "availability": null,
+                "url": null,
+                "energyClass": null,
+                "sku": "M-0513-04-060-0004",
+                "title": "Regal Manchester IV",
+                "price": {
+                    "amount": "279.99",
+                    "currency": "EUR",
+                    "isRecommendedRetailPrice": false
+                },
+                "_metadata": {
+                    "type": "article"
+                },
+                "_links": {
+                    "self": {
+                        "href": "https://api-mobile.home24.com/api/v1/articles/M-0513-04-060-0004?appDomain=1&locale=de_DE"
+                    },
+                    "webShopUrl": {
+                        "href": null
+                    }
+                }
+            }
+        ]
+    }
+}

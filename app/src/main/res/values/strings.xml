@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Home24 La-la-like</string>
+
+    <string name="simple_fragment_transition">transition</string>
+
+    <string name="review">review</string>
+
+    <string name="review_list_mode">List or Grid</string>
+
+</resources>
