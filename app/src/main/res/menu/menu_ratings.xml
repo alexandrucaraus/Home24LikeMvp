@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/menu_view"
-        android:icon="@drawable/view_list"
+        android:icon="@drawable/view_grid"
         android:title="@string/review_list_mode"
         app:showAsAction="always"/>
 

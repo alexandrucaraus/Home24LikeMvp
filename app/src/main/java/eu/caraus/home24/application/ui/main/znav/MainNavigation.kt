@@ -24,8 +24,8 @@ class MainNavigation( activity: BaseActivity, @param:IdRes @field:IdRes private 
         loadFragmentWithTag( SelectionFragment.newInstance(), SelectionFragment.TAG )
     }
 
-    fun navigateToReviewFragment( list: List<ArticlesItem?> , liked : List<String>){
-        loadFragmentWithTag( ReviewFragment.newInstance(list,liked), ReviewFragment.TAG )
+    fun navigateToReviewFragment( reviewedItems : HashMap<ArticlesItem?,Boolean> ){
+        loadFragmentWithTag( ReviewFragment.newInstance( reviewedItems), ReviewFragment.TAG )
     }
 
     fun goBack() : Boolean {

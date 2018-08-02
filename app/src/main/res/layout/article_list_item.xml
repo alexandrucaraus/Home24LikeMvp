@@ -3,15 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:minHeight="100dp"
+    android:layout_height="120dp"
+    android:minHeight="120dp"
     android:elevation="1dp"
     android:layout_margin="8dp"
     android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
+        android:id="@+id/rl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivArticleImage"
@@ -35,8 +36,7 @@
             android:text="title" />
 
         <TextView
-            android:id="@+id/tvArticleDescr"
-            style="@style/AppTheme.CardBodyTextStyle"
+            android:id="@+id/tvArticlePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvArticleTitle"
@@ -44,17 +44,32 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/ivArticleImage"
-            android:text="description" />
+            android:text="@string/price"
+            style="@style/AppTheme.CardBodyTextStyle"/>
+
+        <TextView
+            android:id="@+id/tvArticlePriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/tvArticlePrice"
+            android:layout_below="@id/tvArticleTitle"
+            android:text="0 EUR"
+            style="@style/AppTheme.CardBodyTextStyle"/>
 
         <ImageView
             android:id="@+id/ivArticleStar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="13dp"
-            android:layout_marginStart="11dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             app:srcCompat="@drawable/star_outline" />
+
+
 
     </RelativeLayout>
 

@@ -21,14 +21,14 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
 
     private var disposable : Disposable? = null
 
-    val articles = mutableListOf<ArticlesItem?>()
+    private val articles = mutableListOf<ArticlesItem?>()
+    private val reviewedArticles = hashMapOf<ArticlesItem?,Boolean>()
 
-    val likedArticles = mutableListOf<String>()
-    val reviewedArticles = mutableListOf<ArticlesItem?>()
+    private var itemsViewed = 0
+            get() = field
 
-    var itemsViewed = 0
-
-    var itemsLiked  = 0
+    private var itemsLiked  = 0
+            get() = field
 
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -78,11 +78,7 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
 
     override fun likeArticle( article: ArticlesItem ) {
 
-        article.sku?.let {
-            likedArticles.add( article.sku )
-        }
-
-        reviewedArticles.add( article )
+        reviewedArticles[ article ] = true
 
         itemsLiked++
 
@@ -92,7 +88,7 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
 
     override fun disLikeArticle(article: ArticlesItem) {
 
-        reviewedArticles.add( article )
+        reviewedArticles[ article ] = false
 
         showArticle()
 
@@ -130,7 +126,7 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
     }
 
     override fun review() {
-        navigator.navigateToReviewScreen( reviewedArticles, likedArticles )
+        navigator.navigateToReviewScreen( reviewedArticles )
     }
 
 }

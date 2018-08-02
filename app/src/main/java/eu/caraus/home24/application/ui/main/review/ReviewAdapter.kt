@@ -12,32 +12,79 @@ import eu.caraus.home24.R
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import kotlinx.android.synthetic.main.article_list_item.view.*
 
-class ReviewAdapter( private val list  : List<ArticlesItem?> ,
-                     private val liked : List<String>?       ) : RecyclerView.Adapter<ReviewAdapter.ViewHolder>() {
+class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : RecyclerView.Adapter<ReviewAdapter.ViewHolder>() {
 
+    companion object {
+        const val LIST = 0
+        const val GRID = 1
+    }
 
+    private val list = map.keys.toMutableList()
 
-    override fun onCreateViewHolder( parent: ViewGroup, viewType: Int): ViewHolder =
-         ViewHolder( LayoutInflater.from( parent.context )
-                                   .inflate( R.layout.article_list_item,
-                                             parent, false ))
+    private var isDisplayAsList = true
 
+    override fun onCreateViewHolder( parent: ViewGroup, viewType: Int): ViewHolder
+            = when( viewType ) {
+                LIST -> ViewHolder(LayoutInflater.from(parent.context)
+                        .inflate(R.layout.article_list_item,
+                                parent, false))
+                else -> ViewHolder(LayoutInflater.from(parent.context)
+                        .inflate(R.layout.article_grid_item,
+                                parent, false))
+    }
 
     override fun getItemCount(): Int = list.size
 
-    override fun onBindViewHolder( holder: ViewHolder, position: Int ) {
+    override fun getItemViewType(position: Int): Int = if( isDisplayAsList ) LIST else GRID
+
+    fun changeViewType(){
+        isDisplayAsList = !isDisplayAsList
+        notifyDataSetChanged()
+    }
+
+    override fun onBindViewHolder( holder : ViewHolder, position : Int ) {
 
         val subject = list[ position ]
 
-        subject?.let {
+        if( isDisplayAsList )  bindList( holder, subject ) else bindGrid( holder, subject )
+
+    }
+
+    private fun bindList( holder: ViewHolder, item : ArticlesItem? ){
+
+        item?.let {
+
+            val isLiked = map[ it ]
 
             it.title?.let {
                 holder.articleTitle?.text = it
             }
 
-            it.description?.let {
-                holder.articleDescr?.text = it.toString()
+            it.price?.let {
+                holder.articlePrice?.text = "${it.amount} ${it.currency}"
             }
+
+            holder.articleLiked?.setImageResource(
+                    if( isLiked == true ) R.drawable.star else R.drawable.star_outline )
+
+            Picasso.with( holder.itemView.context )
+                    .load( Uri.parse( it.media?.get(0)?.uri ))
+                    .fit()
+                    .centerCrop()
+                    .into( holder.articleImage )
+        }
+
+    }
+
+
+    private fun bindGrid( holder: ViewHolder, item : ArticlesItem? ){
+
+        item?.let {
+
+            val isLiked = map[ it ]
+
+            holder.articleLiked?.setImageResource(
+                    if( isLiked == true ) R.drawable.star else R.drawable.star_outline )
 
             Picasso.with( holder.itemView.context )
                     .load( Uri.parse( it.media?.get(0)?.uri ))
@@ -51,7 +98,7 @@ class ReviewAdapter( private val list  : List<ArticlesItem?> ,
     class ViewHolder( view : View ) : RecyclerView.ViewHolder( view ) {
         var articleImage : ImageView? = view.ivArticleImage
         var articleTitle : TextView?  = view.tvArticleTitle
-        var articleDescr : TextView?  = view.tvArticleDescr
+        var articlePrice : TextView?  = view.tvArticlePriceValue
         var articleLiked : ImageView? = view.ivArticleStar
     }
 

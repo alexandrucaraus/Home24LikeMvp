@@ -3,6 +3,7 @@ package eu.caraus.home24.application.ui.main.selection
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import eu.caraus.home24.R
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_selection.view.*
 import javax.inject.Inject
 import com.squareup.picasso.Picasso
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
+import eu.caraus.home24.application.ui.base.BaseActivity
 
 class SelectionFragment : BaseFragment(), SelectionContract.View {
 
@@ -54,6 +56,12 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
         super.onPause()
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu?) {
+        ( activity as BaseActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+          activity?.invalidateOptionsMenu()
+        super.onPrepareOptionsMenu(menu)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate( R.layout.fragment_selection, null)
         init(view)
@@ -61,6 +69,8 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
     }
 
     private fun init( view: View ) {
+
+
 
         deactivateReview()
 

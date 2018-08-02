@@ -40,7 +40,7 @@ interface SelectionContract : BaseContract {
 
     interface Navigator {
 
-        fun navigateToReviewScreen( list: List<ArticlesItem?> , liked : List<String> )
+        fun navigateToReviewScreen( reviewedItems : HashMap<ArticlesItem?,Boolean> )
 
     }
 

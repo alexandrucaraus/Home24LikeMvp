@@ -1,11 +1,15 @@
 <resources>
 
-    <string name="app_name">Home24 La-la-like</string>
+    <string name="app_name">Home24 Tra-la-like</string>
 
     <string name="simple_fragment_transition">transition</string>
 
     <string name="review">review</string>
 
     <string name="review_list_mode">List or Grid</string>
+
+    <string name="price">Price : </string>
+
+    <string name="left_in_stock">Left only : </string>
 
 </resources>

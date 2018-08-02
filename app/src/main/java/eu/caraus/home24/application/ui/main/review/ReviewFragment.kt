@@ -1,6 +1,7 @@
 package eu.caraus.home24.application.ui.main.review
 
 import android.os.Bundle
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.*
@@ -11,8 +12,9 @@ import kotlinx.android.synthetic.main.fragment_ratings.view.*
 
 
 import javax.inject.Inject
-import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
+import eu.caraus.home24.application.ui.base.BaseActivity
 
 
 class ReviewFragment : BaseFragment(), ReviewContract.View {
@@ -22,16 +24,17 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
         val TAG = ReviewFragment::class.java.simpleName
 
-        const val REVIEW_LIST = "REVIEW_LIST"
-        const val LIKED_LIST = "LIKED_LIST"
+        const val REVIEWED_ITEMS_MAP = "REVIEWED_ITEMS_MAP"
 
-        fun newInstance( items : List<ArticlesItem?>, liked : List<String> ) : ReviewFragment {
+        fun newInstance( reviewedItems : HashMap<ArticlesItem?,Boolean>  ) : ReviewFragment {
 
             val fragment = ReviewFragment()
+
             val bundle = Bundle()
 
-            bundle.putSerializable( REVIEW_LIST , Gson().toJson(items))
-            bundle.putSerializable( LIKED_LIST  , Gson().toJson(liked))
+            val gson = GsonBuilder().enableComplexMapKeySerialization().setPrettyPrinting().create()
+
+            bundle.putSerializable( REVIEWED_ITEMS_MAP , gson.toJson( reviewedItems ))
 
             fragment.arguments = bundle
 
@@ -43,10 +46,11 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
     @Inject
     lateinit var presenter : ReviewContract.Presenter
 
-    lateinit var adapter   : ReviewAdapter
+    private lateinit var adapter   : ReviewAdapter
 
-    var list  : List<ArticlesItem>? = null
-    var liked : List<String>? = null
+    private var map  : HashMap<ArticlesItem?,Boolean>? = null
+
+    private var isShowAsList = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +59,7 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
     }
 
     override fun onResume() {
+        activity?.invalidateOptionsMenu()
         presenter.onViewAttached(this)
         super.onResume()
     }
@@ -76,35 +81,57 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when ( item?.itemId ) {
-            android.R.id.home -> {
-                presenter.goBack()
+
+            android.R.id.home ->  presenter.goBack()
+
+            R.id.menu_view -> {
+                    isShowAsList = !isShowAsList
+                    item.setIcon( if( isShowAsList ) R.drawable.view_grid else R.drawable.view_list )
+                    setRecycleViewLayoutManager( isShowAsList )
             }
+
         }
         return true
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?) {
+        ( activity as BaseActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        activity?.invalidateOptionsMenu()
+        super.onPrepareOptionsMenu(menu)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_ratings, null)
 
-        arguments?.getString(REVIEW_LIST)?.let {
-            list = Gson().fromJson( it , toType<List<ArticlesItem?>>())
+        arguments?.getString(REVIEWED_ITEMS_MAP)?.let {
+
+            val string = it
+
+            val gson = GsonBuilder().enableComplexMapKeySerialization()
+                                           .setPrettyPrinting()
+                                           .create()
+
+            map = gson.fromJson( it , toType<HashMap<ArticlesItem?,Boolean>>())
+
         }
 
-        arguments?.getString(LIKED_LIST)?.let {
-            liked = Gson().fromJson( it, toType<List<String>?>())
-        }
-
-
-        init( view, list!!, liked )
+        // TODO : check this
+        init( view, map!! )
 
         return view
     }
 
-    private fun init(view : View, articles : List<ArticlesItem?> , liked: List<String>? ){
+    private fun init(view : View, map : HashMap<ArticlesItem?,Boolean> ){
 
-        view.rvReviewItems.layoutManager = LinearLayoutManager( context )
+        (activity as BaseActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        adapter = ReviewAdapter( articles , liked )
+        view.rvReviewItems.layoutManager =
+                if( isShowAsList == true )
+                    LinearLayoutManager( context )
+                else
+                    GridLayoutManager( context , 2 )
+
+        adapter = ReviewAdapter( map)
         adapter.registerAdapterDataObserver( object : RecyclerView.AdapterDataObserver() {
             override fun onChanged() {
                 super.onChanged()
@@ -116,7 +143,21 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
     }
 
-    private fun checkEmptyAdapter() {
+    private fun setRecycleViewLayoutManager( asList : Boolean ){
+
+        if( asList )
+            view?.rvReviewItems?.layoutManager = LinearLayoutManager( context )
+        else
+            view?.rvReviewItems?.layoutManager = GridLayoutManager( context, 2)
+
+        adapter.changeViewType()
+
+        view?.rvReviewItems?.adapter = adapter
+
+    }
+
+    private fun checkEmptyAdapter() { //TODO: check this
+
         when( adapter.itemCount ){
             0 -> {}
             else -> {}
