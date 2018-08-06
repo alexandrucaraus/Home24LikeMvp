@@ -3,7 +3,6 @@ package eu.caraus.home24.application.ui.main.selection
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.Espresso.pressBack
 import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.action.ViewActions.scrollTo
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.contrib.RecyclerViewActions
 import android.support.test.espresso.matcher.ViewMatchers.*
@@ -22,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_start.*
 import android.support.v7.widget.RecyclerView
 import android.support.test.espresso.matcher.BoundedMatcher
 import android.view.View
+import eu.caraus.home24.application.common.Configuration.Companion.NUMBER_OF_ITEMS_TO_REVIEW
 import eu.caraus.home24.application.ui.main.review.ReviewAdapter
 import org.hamcrest.Description
 import org.hamcrest.Matcher
@@ -36,6 +36,8 @@ class UiFlow {
 
     @get:Rule
     var mainActivityRule = ActivityTestRule(MainActivity::class.java)
+
+    val numberOfArticles = NUMBER_OF_ITEMS_TO_REVIEW
 
     @Test
     fun uiTestSimple() {
@@ -66,12 +68,12 @@ class UiFlow {
         onView( withId( R.id.tvLiked)).check( matches( withText("0")))
         onView( withId( R.id.tvTotal)).check( matches( withText("1")))
 
-        for( i  in 1..12 ) {
+        for( i  in 1..numberOfArticles ) {
             onView( withId( R.id.ivLike)).perform( click())
         }
 
-        onView( withId( R.id.tvLiked)).check( matches( withText("12")))
-        onView( withId( R.id.tvTotal)).check( matches( withText("12")))
+        onView( withId( R.id.tvLiked)).check( matches( withText("$numberOfArticles")))
+        onView( withId( R.id.tvTotal)).check( matches( withText("$numberOfArticles")))
 
         onView( withId( R.id.btReview)).check( matches( isDisplayed()) )
 
@@ -96,12 +98,12 @@ class UiFlow {
         onView( withId( R.id.tvLiked)).check( matches( withText("0")))
         onView( withId( R.id.tvTotal)).check( matches( withText("1")))
 
-        for( i  in 1..12 ) {
+        for( i  in 1..numberOfArticles ) {
             onView( withId( R.id.ivLike)).perform( click())
         }
 
-        onView( withId( R.id.tvLiked)).check( matches( withText("12")))
-        onView( withId( R.id.tvTotal)).check( matches( withText("12")))
+        onView( withId( R.id.tvLiked)).check( matches( withText("$numberOfArticles")))
+        onView( withId( R.id.tvTotal)).check( matches( withText("$numberOfArticles")))
 
         onView( withId( R.id.btReview)).check( matches( isDisplayed()) )
 
@@ -110,10 +112,10 @@ class UiFlow {
         onView(withId(R.id.rvReviewItems)).check( matches(
                 atPosition(0, hasDescendant( withText("Premium Komfortmatratze Smood")))))
 
-        onView( withId(R.id.rvReviewItems)).perform( RecyclerViewActions.scrollToPosition<ReviewAdapter.ViewHolder>(6))
-
-        onView(withId(R.id.rvReviewItems)).check( matches(
-                atPosition(6, hasDescendant(withText("Schlafsofa Latina Webstoff")))))
+//        onView( withId(R.id.rvReviewItems)).perform( RecyclerViewActions.scrollToPosition<ReviewAdapter.ViewHolder>(7))
+//
+//        onView(withId(R.id.rvReviewItems)).check( matches(
+//                atPosition(6, hasDescendant(withText("Schlafsofa Latina Webstoff")))))
 
     }
 
