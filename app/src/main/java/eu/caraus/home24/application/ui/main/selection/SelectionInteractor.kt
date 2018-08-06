@@ -7,10 +7,8 @@ import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.data.remote.home24.Home24Api
 import io.reactivex.subjects.PublishSubject
 
-
 class SelectionInteractor( private val home24Api : Home24Api ,
                            private val scheduler : SchedulerProvider ) : SelectionContract.Interactor {
-
 
     private val dataFetchResult = PublishSubject.create<Outcome<List<ArticlesItem?>>>()
 
@@ -29,8 +27,24 @@ class SelectionInteractor( private val home24Api : Home24Api ,
                     }
                 },
                 {
-                    dataFetchResult.failed(it)
-                })
+                    dataFetchResult.failed( it )
+                }
+        )
+
+    }
+
+    override fun getArticles( numberOfArticles: Int ) {
+
+        home24Api.getArticles( 0 , numberOfArticles ).subOnIoObsOnUi( scheduler).subscribe(
+                {
+                    it.embedded?.articles?.let {
+                        dataFetchResult.success( it )
+                    }
+                },
+                {
+                    dataFetchResult.failed( it )
+                }
+        )
 
     }
 

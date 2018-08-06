@@ -3,9 +3,9 @@ package eu.caraus.home24.application.ui.main.selection
 import android.arch.lifecycle.LifecycleObserver
 import eu.caraus.dynamo.application.common.retrofit.Outcome
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
-import eu.caraus.home24.application.data.domain.home24.Home24ApiData
+
 import eu.caraus.home24.application.ui.base.BaseContract
-import io.reactivex.Flowable
+
 import io.reactivex.subjects.PublishSubject
 
 
@@ -13,27 +13,38 @@ interface SelectionContract : BaseContract {
 
     interface Presenter : BaseContract.BasePresenter<View>, LifecycleObserver {
 
-        fun likeArticle( article : ArticlesItem )
-        fun disLikeArticle( article: ArticlesItem )
+        fun likeArticle()
+        fun disLikeArticle()
+
+        fun getItemsLiked() : Int
+        fun getItemsCount() : Int
 
         fun review()
+
     }
 
     interface View : BaseContract.BaseView {
 
         fun showArticle( article : ArticlesItem )
+        fun hideArticle()
 
-        fun showLikesCount( likesCount : String)
-        fun showTotalCount( totalLikesCount : String )
+        fun showReview()
+        fun hideReview()
 
-        fun activateReview()
-        fun deactivateReview()
+        fun showLikesCount( likesCount : String )
+        fun showTotalCount( totalCount : String )
+
+        fun showLoading()
+        fun hideLoading()
+
+        fun showError( error : String)
 
     }
 
     interface Interactor {
 
         fun getArticles()
+        fun getArticles( numberOfArticles : Int )
         fun getArticlesOutcome() : PublishSubject<Outcome<List<ArticlesItem?>>>
 
     }

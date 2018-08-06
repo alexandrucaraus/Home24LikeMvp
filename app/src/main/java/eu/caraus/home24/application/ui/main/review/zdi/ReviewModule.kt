@@ -9,9 +9,8 @@ import eu.caraus.home24.application.ui.main.review.ReviewPresenter
 class ReviewModule {
 
     @Provides
-    internal fun providesPresenter(interactor: ReviewContract.Interactor,
-                                   navigator: ReviewContract.Navigator): ReviewContract.Presenter {
-        return ReviewPresenter(interactor, navigator)
+    internal fun providesPresenter( navigator: ReviewContract.Navigator): ReviewContract.Presenter {
+        return ReviewPresenter( navigator )
     }
 
 }

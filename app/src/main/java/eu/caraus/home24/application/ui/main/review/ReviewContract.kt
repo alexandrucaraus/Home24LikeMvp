@@ -12,8 +12,6 @@ interface ReviewContract : BaseContract {
 
     interface View : BaseContract.BaseView
 
-    interface Interactor
-
     interface Navigator {
 
         fun goBack()

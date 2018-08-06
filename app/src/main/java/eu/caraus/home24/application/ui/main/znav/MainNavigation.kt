@@ -29,10 +29,11 @@ class MainNavigation( activity: BaseActivity, @param:IdRes @field:IdRes private 
     }
 
     fun goBack() : Boolean {
-        return when( fragmentManager.backStackEntryCount ) {
-            1 -> false
-            else -> { fragmentManager.popBackStack() ; true }
-        }
+        if( fragmentManager.backStackEntryCount <= 1 )
+            return true
+        else
+            fragmentManager.popBackStackImmediate()
+        return false
     }
 
     private fun loadFragmentWithTag(fragment: BaseFragment, tag : String) {

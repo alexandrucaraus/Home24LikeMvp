@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="eu.caraus.home24.application.ui.main.MainActivity"
+            android:name="eu.caraus.home24.application.ui.start.StartActivity"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/AppTheme.MainTheme">
 
@@ -25,6 +25,10 @@
             </intent-filter>
 
         </activity>
+
+        <activity
+            android:name=".application.ui.main.MainActivity"
+            android:configChanges="orientation|keyboardHidden"/>
 
     </application>
 

@@ -43,9 +43,7 @@ class MainActivity : BaseActivity(), MainContract.View {
     }
 
     override fun onBackPressed() {
-        if( presenter.onBack() )
-        else
-            finish()
+        if( presenter.goBack() ) finish()
     }
 
 }

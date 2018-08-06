@@ -4,26 +4,20 @@ import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.OnLifecycleEvent
 
 
-class MainPresenter(val interactor : MainContract.Interactor,
-                    val navigator  : MainContract.Navigator   ) : MainContract.Presenter {
+class MainPresenter( val navigator  : MainContract.Navigator   ) : MainContract.Presenter {
 
-    private var view : MainContract.View? = null
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
-        navigator.showCourseList()
+        navigator.showSelection()
     }
 
-    override fun onBack(): Boolean {
+    override fun goBack(): Boolean {
         return navigator.goBack()
     }
 
-    override fun onViewAttached( view: MainContract.View) {
-        this.view = view
-    }
+    override fun onViewAttached( view: MainContract.View) {}
 
-    override fun onViewDetached( detach: Boolean) {
-        this.view = null
-    }
+    override fun onViewDetached( detach: Boolean) {}
 
 }

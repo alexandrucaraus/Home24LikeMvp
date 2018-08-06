@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/ivArticleImage"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"

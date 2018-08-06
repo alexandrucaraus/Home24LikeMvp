@@ -3,33 +3,31 @@ package eu.caraus.home24.application.ui.main.selection
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.OnLifecycleEvent
 import eu.caraus.dynamo.application.common.retrofit.Outcome
+import eu.caraus.home24.application.common.Configuration
 import eu.caraus.home24.application.common.extensions.subOnIoObsOnUi
 
 import eu.caraus.home24.application.common.schedulers.SchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import io.reactivex.disposables.Disposable
 
-class SelectionPresenter( val interactor : SelectionContract.Interactor,
-                          val navigator  : SelectionContract.Navigator,
+class SelectionPresenter( private val interactor : SelectionContract.Interactor,
+                          private val navigator  : SelectionContract.Navigator,
                           private val scheduler  : SchedulerProvider ) : SelectionContract.Presenter {
 
-    companion object {
-        const val REVIEW_ITEM_COUNT = 5
-    }
 
     private var view : SelectionContract.View? = null
 
     private var disposable : Disposable? = null
 
-    private val articles = mutableListOf<ArticlesItem?>()
+    val articles = mutableListOf<ArticlesItem?>()
+
     private val reviewedArticles = hashMapOf<ArticlesItem?,Boolean>()
 
-    private var itemsViewed = 0
-            get() = field
+    private var itemsLiked = 0
 
-    private var itemsLiked  = 0
-            get() = field
+    private var itemsCount = 0
 
+    private var isInReview = false
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
@@ -42,25 +40,25 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
 
                 is Outcome.Success  ->  {
 
-                    val showData = articles.size == 0
-
                     articles.addAll( it.data )
 
-                    if( showData ) showArticle()
+                    showArticle()
 
                 }
 
-                is Outcome.Failure  ->  showError()
+                is Outcome.Failure  -> showError( "${it.error.message}" )
 
             }
 
         }
 
+        interactor.getArticles( Configuration.NUMBER_OF_ITEMS_TO_REVIEW )
+
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onResume() {
-        interactor.getArticles()
+        showArticle()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
@@ -76,53 +74,128 @@ class SelectionPresenter( val interactor : SelectionContract.Interactor,
         this.view = null
     }
 
-    override fun likeArticle( article: ArticlesItem ) {
+    /**
+     *  Method for liking an article
+     *
+     *  This method :
+     *  increments the number of liked articles,
+     *  marks the article as liked in the map,
+     *  increments the counter of reviewed items
+     *
+     *  on the last item review is shown
+     *
+     *  @author AC
+     *
+     */
+    override fun likeArticle() {
 
-        reviewedArticles[ article ] = true
+        if( isInReview ){
+            view?.hideArticle()
+            view?.showReview()
+            return
+        }
 
-        itemsLiked++
+        if( itemsCount <= articles.lastIndex ) {
 
-        showArticle()
+            if( itemsCount == articles.lastIndex && !isInReview ){
+
+                reviewedArticles[ articles[ itemsCount ] ] = true
+
+                itemsLiked++
+
+                view?.showLikesCount( "${getItemsLiked()}" )
+
+                isInReview = true
+
+                view?.hideArticle()
+                view?.showReview()
+
+                return
+            }
+
+            reviewedArticles[ articles[ itemsCount ] ] = true
+
+            if( itemsCount < articles.lastIndex ) {
+                itemsLiked++
+                itemsCount++
+                showArticle()
+            }
+
+        }
 
     }
 
-    override fun disLikeArticle(article: ArticlesItem) {
+    /**
+     *  Method for dis-liking an article
+     *
+     *  This method :
+     *
+     *  marks the article as disliked in the map,
+     *  increments the counter of reviewed items
+     *
+     *  on the last item review  button is shown
+     *
+     *  @author AC
+     *
+     */
 
-        reviewedArticles[ article ] = false
+    override fun disLikeArticle() {
 
-        showArticle()
+        if( isInReview ){
+            view?.hideArticle()
+            view?.showReview()
+            return
+        }
+
+        if( itemsCount <= articles.lastIndex ){
+
+            if( itemsCount == articles.lastIndex && !isInReview ){
+
+                reviewedArticles[ articles[ itemsCount ] ] = false
+
+                isInReview = true
+
+                view?.hideArticle()
+                view?.showReview()
+
+            }
+
+            reviewedArticles[ articles[ itemsCount ] ] = false
+
+            if( itemsCount < articles.lastIndex ) {
+                itemsCount++
+                showArticle()
+            }
+        }
 
     }
 
     private fun showArticle() {
 
-        if( itemsViewed == articles.size - 2 ){
-            interactor.getArticles()
-        }
+        if( itemsCount  > articles.lastIndex ) return
 
-        view?.showLikesCount( "$itemsLiked" )
-        view?.showTotalCount( "$itemsViewed")
+        view?.showLikesCount( "${getItemsLiked()}" )
+        view?.showTotalCount( "${getItemsCount()}" )
 
-        articles[ itemsViewed++ ]?.let { view?.showArticle( it ) }
-
-        if( itemsViewed >= REVIEW_ITEM_COUNT ){
-            view?.activateReview()
-        } else {
-            view?.deactivateReview()
-        }
+        articles[ itemsCount ]?.let { view?.showArticle( it ) }
 
     }
 
-    private fun showLoading() {
+    override fun getItemsLiked() = itemsLiked
 
+    override fun getItemsCount() = itemsCount + 1
+
+    private fun showLoading() {
+        view?.showLoading()
     }
 
     private fun hideLoading() {
-
+        view?.hideLoading()
     }
 
-    private fun showError(){
-
+    private fun showError( error : String ){
+        view?.showError( error )
+        view?.hideLoading()
     }
 
     override fun review() {

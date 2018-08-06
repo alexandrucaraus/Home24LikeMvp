@@ -2,15 +2,12 @@
 
 buildscript {
 
-    ext.kotlin_version = '1.2.51'
+    ext.kotlin_version = '1.2.60'
 
     repositories {
+
         google()
         jcenter()
-
-        // icepick
-        maven {url "https://clojars.org/repo/"}
-
     }
 
     dependencies {
@@ -26,6 +23,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {  url "https://jitpack.io" }
     }
 
 }

@@ -5,23 +5,19 @@ import android.arch.lifecycle.LifecycleObserver
 
 import eu.caraus.home24.application.ui.base.BaseContract
 
-
 interface MainContract : BaseContract {
 
     interface Presenter : BaseContract.BasePresenter<View>, LifecycleObserver {
-        fun onBack() : Boolean
+        fun goBack() : Boolean
     }
 
     interface View : BaseContract.BaseView
 
-    interface Interactor
-
     interface Navigator {
 
-        fun goBack() : Boolean
+        fun showSelection()
 
-        fun showCourseList()
-        fun showCourseDetails( courseId : String )
+        fun goBack() : Boolean
 
     }
 

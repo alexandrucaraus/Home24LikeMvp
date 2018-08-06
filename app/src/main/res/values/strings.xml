@@ -4,12 +4,16 @@
 
     <string name="simple_fragment_transition">transition</string>
 
-    <string name="review">review</string>
+    <string name="review">Review Articles</string>
 
     <string name="review_list_mode">List or Grid</string>
 
     <string name="price">Price : </string>
 
     <string name="left_in_stock">Left only : </string>
+
+    <string name="no_more_articles">Review Articles</string>
+
+    <string name="start">start</string>
 
 </resources>

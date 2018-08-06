@@ -15,6 +15,7 @@ import javax.inject.Inject
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import eu.caraus.home24.application.ui.base.BaseActivity
+import kotlinx.android.synthetic.main.fragment_ratings.*
 
 
 class ReviewFragment : BaseFragment(), ReviewContract.View {
@@ -79,6 +80,19 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu?) {
+        ( activity as BaseActivity).apply {
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(false)
+        }
+
+        menu?.findItem( R.id.menu_view )
+                ?.setIcon( if( isShowAsList ) R.drawable.view_grid
+                                  else        R.drawable.view_list )
+
+        super.onPrepareOptionsMenu(menu)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when ( item?.itemId ) {
 
@@ -86,18 +100,12 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
             R.id.menu_view -> {
                     isShowAsList = !isShowAsList
-                    item.setIcon( if( isShowAsList ) R.drawable.view_grid else R.drawable.view_list )
                     setRecycleViewLayoutManager( isShowAsList )
+                    activity?.invalidateOptionsMenu()
             }
 
         }
         return true
-    }
-
-    override fun onPrepareOptionsMenu(menu: Menu?) {
-        ( activity as BaseActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        activity?.invalidateOptionsMenu()
-        super.onPrepareOptionsMenu(menu)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -105,13 +113,8 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
         arguments?.getString(REVIEWED_ITEMS_MAP)?.let {
 
-            val string = it
-
-            val gson = GsonBuilder().enableComplexMapKeySerialization()
-                                           .setPrettyPrinting()
-                                           .create()
-
-            map = gson.fromJson( it , toType<HashMap<ArticlesItem?,Boolean>>())
+            map = GsonBuilder().enableComplexMapKeySerialization().setPrettyPrinting().create()
+                            .fromJson( it , toType<HashMap<ArticlesItem?,Boolean>>())
 
         }
 
@@ -145,14 +148,19 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
     private fun setRecycleViewLayoutManager( asList : Boolean ){
 
+        val visibleItemPosition = ( rvReviewItems.layoutManager as LinearLayoutManager )
+                .findFirstCompletelyVisibleItemPosition()
+
         if( asList )
-            view?.rvReviewItems?.layoutManager = LinearLayoutManager( context )
+            rvReviewItems?.layoutManager = LinearLayoutManager( context )
         else
-            view?.rvReviewItems?.layoutManager = GridLayoutManager( context, 2)
+            rvReviewItems?.layoutManager = GridLayoutManager( context, 2)
 
-        adapter.changeViewType()
+        adapter.changeViewType( asList )
 
-        view?.rvReviewItems?.adapter = adapter
+        rvReviewItems?.adapter = adapter
+
+        rvReviewItems?.scrollToPosition( visibleItemPosition)
 
     }
 
@@ -164,6 +172,6 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
         }
     }
 
-    inline fun <reified T> toType() = object: TypeToken<T>() {}.type
+    inline fun <reified T> toType() = object : TypeToken<T>() {}.type
 
 }

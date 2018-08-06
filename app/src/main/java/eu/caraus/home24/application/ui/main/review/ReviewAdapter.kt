@@ -37,9 +37,11 @@ class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : Recycl
 
     override fun getItemViewType(position: Int): Int = if( isDisplayAsList ) LIST else GRID
 
-    fun changeViewType(){
-        isDisplayAsList = !isDisplayAsList
+    fun changeViewType( asList : Boolean ){
+
+        isDisplayAsList = asList
         notifyDataSetChanged()
+
     }
 
     override fun onBindViewHolder( holder : ViewHolder, position : Int ) {
@@ -52,25 +54,28 @@ class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : Recycl
 
     private fun bindList( holder: ViewHolder, item : ArticlesItem? ){
 
-        item?.let {
+        item?.let { article ->
 
-            val isLiked = map[ it ]
+            val isLiked = map[ article ]
 
-            it.title?.let {
+            article.title?.let {
                 holder.articleTitle?.text = it
             }
 
-            it.price?.let {
+            article.price?.let {
                 holder.articlePrice?.text = "${it.amount} ${it.currency}"
             }
 
-            holder.articleLiked?.setImageResource(
-                    if( isLiked == true ) R.drawable.star else R.drawable.star_outline )
+            if( isLiked == true )
+                holder.articleLiked?.setImageResource( R.drawable.star )
+            else
+                holder.articleLiked?.visibility = View.GONE
 
             Picasso.with( holder.itemView.context )
-                    .load( Uri.parse( it.media?.get(0)?.uri ))
+                    .load( Uri.parse( article.media?.get(0)?.uri ))
+                    .error( R.drawable.image_broken)
                     .fit()
-                    .centerCrop()
+                    .centerInside()
                     .into( holder.articleImage )
         }
 
@@ -79,17 +84,20 @@ class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : Recycl
 
     private fun bindGrid( holder: ViewHolder, item : ArticlesItem? ){
 
-        item?.let {
+        item?.let { article ->
 
-            val isLiked = map[ it ]
+            val isLiked = map[ article ]
 
-            holder.articleLiked?.setImageResource(
-                    if( isLiked == true ) R.drawable.star else R.drawable.star_outline )
+            if( isLiked == true )
+                holder.articleLiked?.setImageResource( R.drawable.star )
+            else
+                holder.articleLiked?.visibility = View.GONE
 
             Picasso.with( holder.itemView.context )
-                    .load( Uri.parse( it.media?.get(0)?.uri ))
+                    .load( Uri.parse( article.media?.get(0)?.uri ))
+                    .error( R.drawable.image_broken)
                     .fit()
-                    .centerCrop()
+                    .centerInside()
                     .into( holder.articleImage )
         }
 
