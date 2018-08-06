@@ -9,8 +9,16 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import eu.caraus.home24.R
 
+/**
+ *  SelectionAnimations - this class is used for some lame animations int the
+ *  [SelectionFragment]
+ */
+
 class SelectionAnimations( private val context : Context ) {
 
+    /**
+     *  Lame slide image left
+     */
     fun slideLeft( view : View , exec : ()->Unit ) {
 
         val animSlide = AnimationUtils.loadAnimation(context, R.anim.slide_left).apply {
@@ -21,6 +29,9 @@ class SelectionAnimations( private val context : Context ) {
 
     }
 
+    /**
+     *  Lame slide image right
+     */
     fun slideRight( view : View, exec: ()->Unit ){
 
         val animSlide = AnimationUtils.loadAnimation(context, R.anim.slide_right).apply {
@@ -45,6 +56,9 @@ class SelectionAnimations( private val context : Context ) {
         }
     }
 
+    /**
+     *  pulsating effect for the star
+     */
     fun expandStar( view : View, onDone : () -> Unit ) {
 
         val scaleUpX = ObjectAnimator.ofFloat( view, "scaleX",1.5f)
@@ -61,7 +75,7 @@ class SelectionAnimations( private val context : Context ) {
 
         val scale = AnimatorSet()
 
-        scale.playSequentially( scaleUp, scaleDw)
+        scale.playSequentially( scaleUp, scaleDw )
 
         scale.addListener( object : Animator.AnimatorListener{
             override fun onAnimationRepeat(animation: Animator?) {}

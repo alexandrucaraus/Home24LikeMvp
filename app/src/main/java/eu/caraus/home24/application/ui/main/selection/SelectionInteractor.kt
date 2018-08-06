@@ -7,6 +7,12 @@ import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.data.remote.home24.Home24Api
 import io.reactivex.subjects.PublishSubject
 
+/**
+ *  SelectionInteractor - this class queries the Home24Api service,
+ *  and the publishes requested data down the pipe
+ *
+ */
+
 class SelectionInteractor( private val home24Api : Home24Api ,
                            private val scheduler : SchedulerProvider ) : SelectionContract.Interactor {
 

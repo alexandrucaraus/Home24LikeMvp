@@ -1,5 +1,8 @@
 package eu.caraus.dynamo.application.common.retrofit
 
+/**
+ *  Class to hold the response state from the api
+ */
 sealed class Outcome<T> {
 
     companion object {

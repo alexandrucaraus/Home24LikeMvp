@@ -6,6 +6,11 @@ import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ *  Home24Api service interface for Retrofit
+ *
+ */
+
 interface Home24Api {
 
     @get:GET("/api/v1/articles?appDomain=1&locale=de_DE&offset=0&limit=10")

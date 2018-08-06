@@ -1,5 +1,12 @@
 package eu.caraus.home24.application.ui.base
 
+/**
+ *
+ *  BaseContract - defines base contract for MPV design pattern,
+ *  a concrete implementation will implement this contract
+ *
+ */
+
 interface BaseContract {
 
     interface BasePresenter<T : BaseContract.BaseView> {

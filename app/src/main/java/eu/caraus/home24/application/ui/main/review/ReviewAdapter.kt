@@ -12,6 +12,11 @@ import eu.caraus.home24.R
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import kotlinx.android.synthetic.main.article_list_item.view.*
 
+/**
+ *  ReviewAdapter - Adapter for the RecycleView inside the ReviewScreen
+ *
+ */
+
 class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : RecyclerView.Adapter<ReviewAdapter.ViewHolder>() {
 
     companion object {
@@ -33,9 +38,9 @@ class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : Recycl
                                 parent, false))
     }
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount() = list.size
 
-    override fun getItemViewType(position: Int): Int = if( isDisplayAsList ) LIST else GRID
+    override fun getItemViewType( position: Int ) = if( isDisplayAsList ) LIST else GRID
 
     fun changeViewType( asList : Boolean ){
 
@@ -46,9 +51,9 @@ class ReviewAdapter( private val map : HashMap<ArticlesItem?,Boolean> ) : Recycl
 
     override fun onBindViewHolder( holder : ViewHolder, position : Int ) {
 
-        val subject = list[ position ]
+        val item = list[ position ]
 
-        if( isDisplayAsList )  bindList( holder, subject ) else bindGrid( holder, subject )
+        if( isDisplayAsList )  bindList( holder, item ) else bindGrid( holder, item )
 
     }
 

@@ -10,6 +10,11 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.HasSupportFragmentInjector
 
+/**
+ *  BaseFragment - basic application fragment, setup object injection
+ *
+ */
+
 open class BaseFragment : Fragment(), HasSupportFragmentInjector {
 
     @Inject

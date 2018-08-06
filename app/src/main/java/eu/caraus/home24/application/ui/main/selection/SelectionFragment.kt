@@ -16,6 +16,12 @@ import eu.caraus.home24.application.ui.base.BaseFragment
 
 import kotlinx.android.synthetic.main.fragment_selection.*
 
+/**
+ *  SelectionFragment - this class is responsible, for displaying
+ *  articles and let users express their opinions about the displayed articles by
+ *  liking or disliking them
+ *
+ */
 
 class SelectionFragment : BaseFragment(), SelectionContract.View {
 
@@ -79,6 +85,9 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
         return view
     }
 
+    /**
+     *  initialization of clickable objects
+     */
     private fun init( view: View ) {
 
         view.ivLike?.setOnClickListener {
@@ -103,6 +112,10 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     }
 
+    /**
+     *  this method displays article image in an ImageView
+     *  is called by the presenter
+     */
     override fun showArticle( article: ArticlesItem ) {
 
         view?.ivLoading?.visibility = View.VISIBLE
@@ -128,19 +141,33 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     }
 
+    /**
+     *  this method hides article imageView
+     */
     override fun hideArticle() {
         ivArticle.visibility = View.GONE
     }
 
+    /**
+     *  this method hides review button
+     */
     override fun hideReview() {
         btReview.visibility = View.GONE
     }
 
+    /**
+     *  this method shows review button
+     */
     override fun showReview() {
         btReview.visibility = View.VISIBLE
         ivArticle.clearAnimation()
     }
 
+    /**
+     *  this method receives number of liked articles,
+     *  and updates if there was a change in the value
+     *  also showing a lame animation after the value is updated
+     */
     override fun showLikesCount( likedCount : String) {
         if( tvLiked?.text?.toString()?.equals( likedCount ) == false ) {
             tvLiked?.text = likedCount
@@ -148,10 +175,17 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
         }
     }
 
+    /**
+     *  this method will update the total number of viewed articles
+     */
     override fun showTotalCount( totalCount : String) {
         tvTotal?.text = totalCount
     }
 
+    /**
+     * this method will display an error, if there will be some network error
+     *
+     */
     override fun showError( error: String ) {
 
         view?.ivLoading?.visibility = View.VISIBLE
@@ -178,14 +212,27 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     }
 
+    /**
+     *
+     *  this will show that articles are loading
+     *
+     */
     override fun showLoading() {
         view?.ivLoading?.visibility = View.VISIBLE
     }
 
+    /**
+     *  this will show that articles are loading
+     *
+     */
     override fun hideLoading() {
         view?.ivLoading?.visibility = View.GONE
     }
 
+    /**
+     *  this will show a snack message
+     *
+     */
     private fun snack( message : String ){
         view?.clRoot?.let {
             Snackbar.make( it, message, Snackbar.LENGTH_LONG).show()

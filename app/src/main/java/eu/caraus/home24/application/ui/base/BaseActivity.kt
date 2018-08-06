@@ -13,6 +13,13 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 
+/**
+ *
+ *  BaseActivity - is set-up with object injection,
+ *
+ *
+ */
+
 open class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     companion object {
@@ -29,18 +36,11 @@ open class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
-        if ( intent != null && intent.extras != null) {
-            setupArguments(intent.extras)
-        }
         super.onCreate(savedInstanceState)
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment>? {
         return fragmentDispatchingAndroidInjector
-    }
-
-    protected fun setupArguments(bundle: Bundle?) {
-
     }
 
 }

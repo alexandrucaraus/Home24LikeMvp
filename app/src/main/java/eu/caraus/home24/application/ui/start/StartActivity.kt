@@ -8,6 +8,12 @@ import eu.caraus.home24.R
 import eu.caraus.home24.application.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_start.*
 
+/**
+ *
+ *  StartActivity - main entry point to the application
+ *
+ */
+
 class StartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

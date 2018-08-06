@@ -17,7 +17,11 @@ import com.google.gson.reflect.TypeToken
 import eu.caraus.home24.application.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.fragment_ratings.*
 
-
+/**
+ *  Review Fragment - this fragment displays items to be reviewed by user,
+ *  which he previously rated.
+ *
+ */
 class ReviewFragment : BaseFragment(), ReviewContract.View {
 
 
@@ -118,11 +122,16 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
         }
 
-        // TODO : check this
-        init( view, map!! )
+        // TODO : show error if the map is empty
+        init( view, map ?: hashMapOf())
 
         return view
     }
+
+    /**
+     *  initialization function for the RecycleView and the adapter
+     *
+     */
 
     private fun init(view : View, map : HashMap<ArticlesItem?,Boolean> ){
 
@@ -134,7 +143,7 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
                 else
                     GridLayoutManager( context , 2 )
 
-        adapter = ReviewAdapter( map)
+        adapter = ReviewAdapter( map )
         adapter.registerAdapterDataObserver( object : RecyclerView.AdapterDataObserver() {
             override fun onChanged() {
                 super.onChanged()
@@ -146,6 +155,9 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
     }
 
+    /**
+     *  this method changes the diplay mode for the RecycleView
+     */
     private fun setRecycleViewLayoutManager( asList : Boolean ){
 
         val visibleItemPosition = ( rvReviewItems.layoutManager as LinearLayoutManager )
@@ -164,11 +176,11 @@ class ReviewFragment : BaseFragment(), ReviewContract.View {
 
     }
 
-    private fun checkEmptyAdapter() { //TODO: check this
-
+    private fun checkEmptyAdapter() {
         when( adapter.itemCount ){
-            0 -> {}
-            else -> {}
+            0 -> {
+                // TODO : show error that adapter is empty
+            } else -> {}
         }
     }
 

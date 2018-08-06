@@ -8,6 +8,10 @@ import eu.caraus.home24.application.ui.base.BaseContract
 
 import io.reactivex.subjects.PublishSubject
 
+/**
+ *  SelectionContract - this is MVP contract implementation for Selection Screen
+ *
+ */
 
 interface SelectionContract : BaseContract {
 

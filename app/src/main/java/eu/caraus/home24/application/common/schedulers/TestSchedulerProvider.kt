@@ -3,6 +3,10 @@ package eu.caraus.home24.application.common.schedulers
 import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers
 
+/**
+ *  Implementation of [SchedulerProvider] to be used in testing
+ */
+
 class TestSchedulerProvider : SchedulerProvider {
 
     override fun ui(): Scheduler {

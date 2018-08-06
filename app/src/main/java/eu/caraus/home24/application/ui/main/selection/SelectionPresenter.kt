@@ -10,6 +10,10 @@ import eu.caraus.home24.application.common.schedulers.SchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import io.reactivex.disposables.Disposable
 
+/**
+ *  Presenter implementation for the Selection screen
+ */
+
 class SelectionPresenter( private val interactor : SelectionContract.Interactor,
                           private val navigator  : SelectionContract.Navigator,
                           private val scheduler  : SchedulerProvider ) : SelectionContract.Presenter {
@@ -85,8 +89,6 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
      *
      *  on the last item review is shown
      *
-     *  @author AC
-     *
      */
     override fun likeArticle() {
 
@@ -136,10 +138,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
      *
      *  on the last item review  button is shown
      *
-     *  @author AC
-     *
      */
-
     override fun disLikeArticle() {
 
         if( isInReview ){
@@ -172,8 +171,16 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
     }
 
+    /**
+     *  method for querying the state of the selection screen
+     *  if true  - user can only review rated articles
+     *  if false - user can only rate articles
+     */
     override fun isInReview() = isInReview
 
+    /**
+     *  updates the ui with the article
+     */
     private fun showArticle() {
 
         if( itemsCount  > articles.lastIndex ) return
@@ -185,8 +192,14 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
     }
 
+    /**
+     *  returns the number of liked items
+     */
     override fun getItemsLiked() = itemsLiked
 
+    /**
+     *  returns the number of rated items + one displayed not yet rated
+     */
     override fun getItemsCount() = itemsCount + 1
 
     private fun showLoading() {
@@ -202,6 +215,9 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
         view?.hideLoading()
     }
 
+    /**
+     *  navigates to the review screen
+     */
     override fun review() {
         navigator.navigateToReviewScreen( reviewedArticles )
     }

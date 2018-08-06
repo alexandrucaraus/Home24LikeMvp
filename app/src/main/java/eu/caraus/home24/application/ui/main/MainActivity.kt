@@ -7,6 +7,11 @@ import eu.caraus.home24.application.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
+/**
+ *  Application's MainActivity,
+ *
+ */
+
 class MainActivity : BaseActivity(), MainContract.View {
 
     companion object {

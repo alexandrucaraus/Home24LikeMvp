@@ -8,7 +8,9 @@ import io.reactivex.Single
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-
+/**
+ * Extension function to subscribe on the background thread and observe on the main thread for a [Completable]
+ * */
 fun Completable.subOnIoObsOnUi(scheduler: SchedulerProvider): Completable {
     return this.subscribeOn(scheduler.io()).observeOn( scheduler.ui())
 }

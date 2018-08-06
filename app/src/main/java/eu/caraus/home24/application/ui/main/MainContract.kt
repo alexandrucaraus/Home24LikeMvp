@@ -1,9 +1,12 @@
 package eu.caraus.home24.application.ui.main
 
-
 import android.arch.lifecycle.LifecycleObserver
 
 import eu.caraus.home24.application.ui.base.BaseContract
+
+/**
+ *  Interface definitions for the MainActivity, which are part of MVP pattern
+ */
 
 interface MainContract : BaseContract {
 

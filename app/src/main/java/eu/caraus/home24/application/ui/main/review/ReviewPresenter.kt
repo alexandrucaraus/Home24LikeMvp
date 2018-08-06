@@ -1,7 +1,10 @@
 package eu.caraus.home24.application.ui.main.review
 
-class ReviewPresenter ( val navigator  : ReviewContract.Navigator ) : ReviewContract.Presenter {
+/**
+ *  Presenter implementation for the Review screen
+ */
 
+class ReviewPresenter ( val navigator  : ReviewContract.Navigator ) : ReviewContract.Presenter {
 
     override fun goBack() {
         navigator.goBack()

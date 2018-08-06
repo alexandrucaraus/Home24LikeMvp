@@ -12,6 +12,13 @@ import eu.caraus.home24.application.ui.main.review.ReviewFragment
 import eu.caraus.home24.application.ui.main.selection.SelectionFragment
 import java.lang.ref.WeakReference
 
+/**
+ *  This class is used to perform the actual navigation,
+ *  either by starting activities or loading specific fragment,
+ *  it lives as long as the MainActivity lives
+ *
+ */
+
 class MainNavigation( activity: BaseActivity, @param:IdRes @field:IdRes private val containerId: Int) {
 
     private val refContext: WeakReference<Context> = WeakReference( activity )
