@@ -14,7 +14,6 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
                           private val navigator  : SelectionContract.Navigator,
                           private val scheduler  : SchedulerProvider ) : SelectionContract.Presenter {
 
-
     private var view : SelectionContract.View? = null
 
     private var disposable : Disposable? = null
@@ -28,6 +27,8 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
     private var itemsCount = 0
 
     private var isInReview = false
+
+    private var isCanShowMore = false
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
@@ -158,6 +159,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
                 view?.hideArticle()
                 view?.showReview()
 
+                return
             }
 
             reviewedArticles[ articles[ itemsCount ] ] = false
@@ -169,6 +171,8 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
         }
 
     }
+
+    override fun isInReview() = isInReview
 
     private fun showArticle() {
 

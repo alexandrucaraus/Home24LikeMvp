@@ -39,9 +39,12 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
     @Inject
     lateinit var presenter : SelectionContract.Presenter
 
+    lateinit var animations: SelectionAnimations
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+        animations = SelectionAnimations( context!! )
         lifecycle.addObserver( presenter )
     }
 
@@ -79,11 +82,19 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
     private fun init( view: View ) {
 
         view.ivLike?.setOnClickListener {
-            presenter.likeArticle()
+            if( !presenter.isInReview() ) {
+                    animations.slideRight(view.ivArticle) {
+                        presenter.likeArticle()
+                    }
+            }
         }
 
         view.ivDislike?.setOnClickListener {
-            presenter.disLikeArticle()
+            if( !presenter.isInReview()) {
+                    animations.slideLeft(view.ivArticle) {
+                        presenter.disLikeArticle()
+                    }
+            }
         }
 
         view.btReview?.setOnClickListener {
@@ -96,6 +107,7 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
         view?.ivLoading?.visibility = View.VISIBLE
         view?.ivArticle?.visibility = View.GONE
+        view?.ivArticle?.clearAnimation()
         view?.ivLoading?.setImageResource(R.drawable.progress_animation)
 
         Picasso.with( context )
@@ -126,10 +138,14 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     override fun showReview() {
         btReview.visibility = View.VISIBLE
+        ivArticle.clearAnimation()
     }
 
     override fun showLikesCount( likedCount : String) {
-        tvLiked?.text = likedCount
+        if( tvLiked?.text?.toString()?.equals( likedCount ) == false ) {
+            tvLiked?.text = likedCount
+            animations.expandStar(  ivLikeStar ){}
+        }
     }
 
     override fun showTotalCount( totalCount : String) {

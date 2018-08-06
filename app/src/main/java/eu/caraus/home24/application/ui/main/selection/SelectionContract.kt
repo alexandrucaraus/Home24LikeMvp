@@ -19,6 +19,8 @@ interface SelectionContract : BaseContract {
         fun getItemsLiked() : Int
         fun getItemsCount() : Int
 
+        fun isInReview() : Boolean
+
         fun review()
 
     }
