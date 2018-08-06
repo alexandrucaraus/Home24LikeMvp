@@ -14,8 +14,8 @@ import org.junit.Test
 class SelectionInteractorTest {
 
 
-    val service = AppModule().provideHome24Api()
-    val scheduler = TestSchedulerProvider()
+    private val service = AppModule().provideHome24Api()
+    private val scheduler = TestSchedulerProvider()
 
     @Test
     fun interactorTest() {
