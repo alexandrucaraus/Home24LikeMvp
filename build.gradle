@@ -25,9 +25,16 @@ allprojects {
         jcenter()
         maven {  url "https://jitpack.io" }
     }
-
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(Test) { task ->
+        task.afterTest { desc, result ->
+            println "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+        }
+    }
 }
