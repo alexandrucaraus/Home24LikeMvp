@@ -36,7 +36,6 @@ class SelectionInteractorTest {
 
         interactor.getArticles()
 
-
         }
 
 }

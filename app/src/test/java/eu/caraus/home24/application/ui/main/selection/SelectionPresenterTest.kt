@@ -37,7 +37,7 @@ class SelectionPresenterTest {
         verify { view.showArticle( capture( slot )) }
 
         assertThat( presenter.getItemsLiked() , `is`(0) )
-        assertThat( presenter.getItemsCount() , `is`(0) )
+        assertThat( presenter.getItemsCount() , `is`(1) )
     }
 
     @Test
@@ -54,7 +54,7 @@ class SelectionPresenterTest {
         verify { view.showArticle( capture( slot )) }
 
         assertThat( presenter.getItemsLiked() , `is`(0))
-        assertThat( presenter.getItemsCount() , `is`(0))
+        assertThat( presenter.getItemsCount() , `is`(1))
 
         assertThat( presenter.articles.size, `is`( Configuration.NUMBER_OF_ITEMS_TO_REVIEW))
 
@@ -63,14 +63,14 @@ class SelectionPresenterTest {
         verify { view.showArticle( capture( slot )) }
 
         assertThat( presenter.getItemsLiked() , `is`(1))
-        assertThat( presenter.getItemsCount() , `is`(1))
+        assertThat( presenter.getItemsCount() , `is`(2))
 
         presenter.likeArticle()
 
         verify { view.showArticle( capture( slot )) }
 
         assertThat( presenter.getItemsLiked() , `is`(2))
-        assertThat( presenter.getItemsCount() , `is`(2))
+        assertThat( presenter.getItemsCount() , `is`(3))
 
     }
 
@@ -88,14 +88,7 @@ class SelectionPresenterTest {
         verify { view.showArticle( capture( slot) ) }
 
         assertThat( presenter.getItemsLiked() , `is`(0))
-        assertThat( presenter.getItemsCount() , `is`(0))
-
-        presenter.disLikeArticle()
-
-        verify { view.showArticle( capture( slot) ) }
-
-        assertThat( presenter.getItemsLiked(), `is`(0))
-        assertThat( presenter.getItemsCount(), `is`(1))
+        assertThat( presenter.getItemsCount() , `is`(1))
 
         presenter.disLikeArticle()
 
@@ -110,6 +103,13 @@ class SelectionPresenterTest {
 
         assertThat( presenter.getItemsLiked(), `is`(0))
         assertThat( presenter.getItemsCount(), `is`(3))
+
+        presenter.disLikeArticle()
+
+        verify { view.showArticle( capture( slot) ) }
+
+        assertThat( presenter.getItemsLiked(), `is`(0))
+        assertThat( presenter.getItemsCount(), `is`(4))
 
     }
 
