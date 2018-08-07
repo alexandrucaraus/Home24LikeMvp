@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:minHeight="120dp"
+    android:layout_height="@dimen/list_item_height"
+    android:minHeight="@dimen/list_item_height"
     android:elevation="1dp"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/normal_margin"
     android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/ivArticleImage"
-            android:layout_width="150dp"
+            android:layout_width="@dimen/grid_item_height"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -28,10 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/short_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/short_margin"
             android:layout_toEndOf="@+id/ivArticleImage"
             android:text="title" />
 
@@ -40,9 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvArticleTitle"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginBottom="@dimen/short_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginStart="@dimen/normal_margin"
             android:layout_toEndOf="@+id/ivArticleImage"
             android:text="@string/price"
             style="@style/AppTheme.CardBodyTextStyle"/>
@@ -51,9 +51,9 @@
             android:id="@+id/tvArticlePriceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginBottom="@dimen/short_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginStart="@dimen/short_margin"
             android:layout_toEndOf="@+id/tvArticlePrice"
             android:layout_below="@id/tvArticleTitle"
             android:text="0 EUR"
@@ -61,15 +61,13 @@
 
         <ImageView
             android:id="@+id/ivArticleStar"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
             app:srcCompat="@drawable/star_outline" />
-
-
 
     </RelativeLayout>
 

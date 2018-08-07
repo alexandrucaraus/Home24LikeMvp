@@ -15,7 +15,14 @@ import io.reactivex.subjects.PublishSubject
 
 interface SelectionContract : BaseContract {
 
+
     interface Presenter : BaseContract.BasePresenter<View>, LifecycleObserver {
+
+        companion object {
+            const val MODE_NONE  = 0
+            const val MODE_LEFT  = 1
+            const val MODE_RIGHT = 2
+        }
 
         fun likeArticle()
         fun disLikeArticle()
@@ -31,7 +38,7 @@ interface SelectionContract : BaseContract {
 
     interface View : BaseContract.BaseView {
 
-        fun showArticle( article : ArticlesItem )
+        fun showArticle( article : ArticlesItem, mode : Int )
         fun hideArticle()
 
         fun showReview()
@@ -42,6 +49,7 @@ interface SelectionContract : BaseContract {
 
         fun showLoading()
         fun hideLoading()
+
 
         fun showError( error : String)
 

@@ -4,10 +4,10 @@ import eu.caraus.home24.application.AppModule
 import eu.caraus.home24.application.common.Configuration
 import eu.caraus.home24.application.common.schedulers.TestSchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_NONE
 import io.mockk.*
 
 import org.hamcrest.CoreMatchers.`is`
-import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThat
 
 import org.junit.Test
@@ -32,12 +32,14 @@ class SelectionPresenterTest {
         presenter.onViewAttached( view )
         presenter.onResume()
 
-        var slot = slot<ArticlesItem>()
+        var articleSlot = slot<ArticlesItem>()
+        var modeSlot = slot<Int>()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( articleSlot ), capture( modeSlot)) }
 
         assertThat( presenter.getItemsLiked() , `is`(0) )
         assertThat( presenter.getItemsCount() , `is`(1) )
+        assertThat( modeSlot.captured, `is`( MODE_NONE ))
     }
 
     @Test
@@ -50,8 +52,9 @@ class SelectionPresenterTest {
         presenter.onResume()
 
         var slot = slot<ArticlesItem>()
+        var modeSlot = slot<Int>()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( slot ), capture( modeSlot)) }
 
         assertThat( presenter.getItemsLiked() , `is`(0))
         assertThat( presenter.getItemsCount() , `is`(1))
@@ -60,14 +63,14 @@ class SelectionPresenterTest {
 
         presenter.likeArticle()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( slot ), capture( modeSlot)) }
 
         assertThat( presenter.getItemsLiked() , `is`(1))
         assertThat( presenter.getItemsCount() , `is`(2))
 
         presenter.likeArticle()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( slot ), capture( modeSlot)) }
 
         assertThat( presenter.getItemsLiked() , `is`(2))
         assertThat( presenter.getItemsCount() , `is`(3))
@@ -84,29 +87,30 @@ class SelectionPresenterTest {
         presenter.onResume()
 
         var slot = slot<ArticlesItem>()
+        var modeSlot = slot<Int>()
 
-        verify { view.showArticle( capture( slot) ) }
+        verify { view.showArticle( capture( slot), capture( modeSlot) ) }
 
         assertThat( presenter.getItemsLiked() , `is`(0))
         assertThat( presenter.getItemsCount() , `is`(1))
 
         presenter.disLikeArticle()
 
-        verify { view.showArticle( capture( slot) ) }
+        verify { view.showArticle( capture( slot), capture( modeSlot) ) }
 
         assertThat( presenter.getItemsLiked(), `is`(0))
         assertThat( presenter.getItemsCount(), `is`(2))
 
         presenter.disLikeArticle()
 
-        verify { view.showArticle( capture( slot) ) }
+        verify { view.showArticle( capture( slot), capture( modeSlot) ) }
 
         assertThat( presenter.getItemsLiked(), `is`(0))
         assertThat( presenter.getItemsCount(), `is`(3))
 
         presenter.disLikeArticle()
 
-        verify { view.showArticle( capture( slot) ) }
+        verify { view.showArticle( capture( slot), capture( modeSlot) ) }
 
         assertThat( presenter.getItemsLiked(), `is`(0))
         assertThat( presenter.getItemsCount(), `is`(4))
@@ -123,8 +127,9 @@ class SelectionPresenterTest {
         presenter.onResume()
 
         var slot = slot<ArticlesItem>()
+        var modeSlot = slot<Int>()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( slot ), capture( modeSlot)) }
 
         assertThat( presenter.articles.size, `is`( Configuration.NUMBER_OF_ITEMS_TO_REVIEW))
 
@@ -132,7 +137,7 @@ class SelectionPresenterTest {
 
             presenter.likeArticle()
 
-            verify { view.showArticle( capture(slot)) }
+            verify { view.showArticle( capture(slot), capture( modeSlot)) }
 
             assertThat( presenter.getItemsLiked() , `is`(i))
             assertThat( presenter.getItemsCount() , `is`(i+1))
@@ -167,8 +172,9 @@ class SelectionPresenterTest {
         presenter.onResume()
 
         var slot = slot<ArticlesItem>()
+        var modeSlot = slot<Int>()
 
-        verify { view.showArticle( capture( slot )) }
+        verify { view.showArticle( capture( slot ), capture( modeSlot)) }
 
         assertThat( presenter.articles.size, `is`( Configuration.NUMBER_OF_ITEMS_TO_REVIEW))
 
@@ -176,7 +182,7 @@ class SelectionPresenterTest {
 
             presenter.disLikeArticle()
 
-            verify { view.showArticle( capture(slot)) }
+            verify { view.showArticle( capture(slot), capture( modeSlot)) }
 
             assertThat( presenter.getItemsLiked() , `is`(0))
             assertThat( presenter.getItemsCount() , `is`(i+1))
@@ -198,7 +204,6 @@ class SelectionPresenterTest {
 
         assertThat( presenter.getItemsLiked() , `is`(0 ))
         assertThat( presenter.getItemsCount() , `is`(10 ))
-
 
     }
 

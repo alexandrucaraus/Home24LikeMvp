@@ -18,7 +18,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:contentInsetStart="4dp"
+            android:contentInsetLeft="4dp"
+            app:contentInsetLeft="16dp"
+            app:contentInsetStart="16dp"
             app:layout_scrollFlags="scroll|enterAlways"
+            app:titleMarginStart="32dp"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </android.support.design.widget.AppBarLayout>

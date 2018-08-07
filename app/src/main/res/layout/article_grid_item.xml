@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:minHeight="150dp"
+    android:layout_height="@dimen/grid_item_height"
+    android:minHeight="@dimen/grid_item_height"
     android:elevation="1dp"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/normal_margin"
     android:foreground="?android:attr/selectableItemBackground">
 
     <RelativeLayout
@@ -23,12 +23,12 @@
 
         <ImageView
             android:id="@+id/ivArticleStar"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
             app:srcCompat="@drawable/star_outline" />
 
     </RelativeLayout>

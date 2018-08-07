@@ -13,6 +13,8 @@ import com.squareup.picasso.Picasso
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.ui.base.BaseActivity
 import eu.caraus.home24.application.ui.base.BaseFragment
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_LEFT
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_RIGHT
 
 import kotlinx.android.synthetic.main.fragment_selection.*
 
@@ -24,6 +26,7 @@ import kotlinx.android.synthetic.main.fragment_selection.*
  */
 
 class SelectionFragment : BaseFragment(), SelectionContract.View {
+
 
     companion object {
 
@@ -61,6 +64,9 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     override fun onResume() {
         presenter.onViewAttached(this)
+        (activity as BaseActivity).apply {
+            invalidateOptionsMenu()
+        }
         super.onResume()
     }
 
@@ -71,11 +77,11 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     override fun onPrepareOptionsMenu(menu: Menu?) {
         ( activity as BaseActivity).apply {
-            supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            supportActionBar?.setDisplayShowHomeEnabled(true)
-            supportActionBar?.setIcon(R.drawable.home_circle)
-            invalidateOptionsMenu()
+            supportActionBar?.setDisplayHomeAsUpEnabled( false )
+            supportActionBar?.setDisplayShowHomeEnabled( true  )
+            supportActionBar?.setIcon( R.drawable.home_circle)
         }
+
         super.onPrepareOptionsMenu(menu)
     }
 
@@ -91,19 +97,11 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
     private fun init( view: View ) {
 
         view.ivLike?.setOnClickListener {
-            if( !presenter.isInReview() ) {
-                    animations.slideRight(view.ivArticle) {
-                        presenter.likeArticle()
-                    }
-            }
+            if( !presenter.isInReview()) presenter.likeArticle()
         }
 
         view.ivDislike?.setOnClickListener {
-            if( !presenter.isInReview()) {
-                    animations.slideLeft(view.ivArticle) {
-                        presenter.disLikeArticle()
-                    }
-            }
+            if( !presenter.isInReview()) presenter.disLikeArticle()
         }
 
         view.btReview?.setOnClickListener {
@@ -116,29 +114,41 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
      *  this method displays article image in an ImageView
      *  is called by the presenter
      */
-    override fun showArticle( article: ArticlesItem ) {
+    override fun showArticle( article: ArticlesItem , mode : Int ) {
 
-        view?.ivLoading?.visibility = View.VISIBLE
-        view?.ivArticle?.visibility = View.GONE
-        view?.ivArticle?.clearAnimation()
-        view?.ivLoading?.setImageResource(R.drawable.progress_animation)
+        when( mode ){
+            MODE_LEFT  -> { swipeLeft(  article) ; return }
+            MODE_RIGHT -> { swipeRight( article) ; return }
+        }
 
+        loadImage( article )
+
+    }
+
+    private fun swipeRight( article: ArticlesItem) {
+        animations.slideRight( ivArticle) {
+            ivArticle.clearAnimation()
+            loadImage( article )
+        }
+    }
+
+    private fun swipeLeft( article: ArticlesItem) {
+        animations.slideLeft( ivArticle ){
+            ivArticle.clearAnimation()
+            loadImage( article )
+        }
+    }
+
+    private fun loadImage( article: ArticlesItem){
         Picasso.with( context )
                 .load( Uri.parse( article.media!![0]?.uri) )
                 .fit()
                 .centerInside()
                 .error( R.drawable.image_broken)
                 .into( view?.ivArticle, object : Callback {
-                    override fun onSuccess() {
-                        view?.ivLoading?.visibility = View.GONE
-                        view?.ivArticle?.visibility = View.VISIBLE
-                    }
-                    override fun onError() {
-                        view?.ivLoading?.visibility = View.GONE
-                        view?.ivArticle?.visibility = View.VISIBLE
-                    }
+                    override fun onSuccess() { ivArticle.visibility = View.VISIBLE }
+                    override fun onError()   { ivArticle.visibility = View.VISIBLE }
                 })
-
     }
 
     /**
@@ -168,9 +178,9 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
      *  and updates if there was a change in the value
      *  also showing a lame animation after the value is updated
      */
-    override fun showLikesCount( likedCount : String) {
-        if( tvLiked?.text?.toString()?.equals( likedCount ) == false ) {
-            tvLiked?.text = likedCount
+    override fun showLikesCount( likesCount : String) {
+        if( tvLiked?.text?.toString()?.equals( likesCount ) == false ) {
+            tvLiked?.text = likesCount
             animations.expandStar(  ivLikeStar ){}
         }
     }
@@ -190,7 +200,6 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
         view?.ivLoading?.visibility = View.VISIBLE
         view?.ivArticle?.visibility = View.GONE
-        view?.ivLoading?.setImageResource(R.drawable.progress_animation)
 
         Picasso.with( context )
                 .load( Uri.parse( error) )
@@ -214,7 +223,7 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
 
     /**
      *
-     *  this will show that articles are loading
+     *  this will show while data is loading
      *
      */
     override fun showLoading() {
@@ -222,7 +231,7 @@ class SelectionFragment : BaseFragment(), SelectionContract.View {
     }
 
     /**
-     *  this will show that articles are loading
+     *  this will show while data is loading
      *
      */
     override fun hideLoading() {

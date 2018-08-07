@@ -8,6 +8,9 @@ import eu.caraus.home24.application.common.extensions.subOnIoObsOnUi
 
 import eu.caraus.home24.application.common.schedulers.SchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_LEFT
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_NONE
+import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_RIGHT
 import io.reactivex.disposables.Disposable
 
 /**
@@ -32,8 +35,6 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
     private var isInReview = false
 
-    private var isCanShowMore = false
-
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
 
@@ -47,7 +48,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
                     articles.addAll( it.data )
 
-                    showArticle()
+                    showArticle( MODE_NONE )
 
                 }
 
@@ -63,7 +64,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun onResume() {
-        showArticle()
+        showArticle( MODE_NONE )
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
@@ -121,7 +122,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
             if( itemsCount < articles.lastIndex ) {
                 itemsLiked++
                 itemsCount++
-                showArticle()
+                showArticle( MODE_RIGHT )
             }
 
         }
@@ -165,7 +166,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
             if( itemsCount < articles.lastIndex ) {
                 itemsCount++
-                showArticle()
+                showArticle( MODE_LEFT )
             }
         }
 
@@ -181,14 +182,14 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
     /**
      *  updates the ui with the article
      */
-    private fun showArticle() {
+    private fun showArticle( mode : Int ) {
 
         if( itemsCount  > articles.lastIndex ) return
 
         view?.showLikesCount( "${getItemsLiked()}" )
         view?.showTotalCount( "${getItemsCount()}" )
 
-        articles[ itemsCount ]?.let { view?.showArticle( it ) }
+        articles[ itemsCount ]?.let { view?.showArticle( it , mode ) }
 
     }
 

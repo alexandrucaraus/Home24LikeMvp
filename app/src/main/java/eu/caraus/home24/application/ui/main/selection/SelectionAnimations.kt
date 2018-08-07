@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.support.v4.view.animation.FastOutSlowInInterpolator
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -76,6 +77,7 @@ class SelectionAnimations( private val context : Context ) {
         val scale = AnimatorSet()
 
         scale.playSequentially( scaleUp, scaleDw )
+        scale.interpolator = FastOutSlowInInterpolator()
 
         scale.addListener( object : Animator.AnimatorListener{
             override fun onAnimationRepeat(animation: Animator?) {}

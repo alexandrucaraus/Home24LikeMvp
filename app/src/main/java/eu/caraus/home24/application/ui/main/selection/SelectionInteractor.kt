@@ -41,6 +41,8 @@ class SelectionInteractor( private val home24Api : Home24Api ,
 
     override fun getArticles( numberOfArticles: Int ) {
 
+        dataFetchResult.loading(true )
+
         home24Api.getArticles( 0 , numberOfArticles ).subOnIoObsOnUi( scheduler).subscribe(
                 {
                     it.embedded?.articles?.let {
