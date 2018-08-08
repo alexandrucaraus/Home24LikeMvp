@@ -6,6 +6,7 @@ import eu.caraus.home24.application.common.schedulers.TestSchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_NONE
 import io.mockk.*
+import io.reactivex.disposables.CompositeDisposable
 
 import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert.assertThat
@@ -18,7 +19,7 @@ class SelectionPresenterTest {
     private val service    = AppModule().provideHome24Api()
     private val scheduler  = TestSchedulerProvider()
 
-    private var interactor =  SelectionInteractor( service, scheduler )
+    private var interactor =  SelectionInteractor( service, scheduler , CompositeDisposable())
 
     private val navigator  = mockk<SelectionNavigator>()
     private var view       = mockk<SelectionContract.View>( relaxed = true )
@@ -26,7 +27,7 @@ class SelectionPresenterTest {
     @Test
     fun showFirstArticle() {
 
-        var presenter = SelectionPresenter( interactor, navigator , scheduler )
+        var presenter = SelectionPresenter( interactor, navigator , scheduler , CompositeDisposable())
 
         presenter.onCreate()
         presenter.onViewAttached( view )
@@ -45,7 +46,7 @@ class SelectionPresenterTest {
     @Test
     fun likeArticle() {
 
-        var presenter = SelectionPresenter( interactor, navigator , scheduler )
+        var presenter = SelectionPresenter( interactor, navigator , scheduler , CompositeDisposable())
 
         presenter.onCreate()
         presenter.onViewAttached( view )
@@ -80,7 +81,7 @@ class SelectionPresenterTest {
     @Test
     fun dislikeArticle() {
 
-        var presenter = SelectionPresenter( interactor, navigator , scheduler )
+        var presenter = SelectionPresenter( interactor, navigator , scheduler , CompositeDisposable())
 
         presenter.onCreate()
         presenter.onViewAttached( view )
@@ -120,7 +121,7 @@ class SelectionPresenterTest {
     @Test
     fun likeAllArticles() {
 
-        var presenter = SelectionPresenter( interactor, navigator , scheduler )
+        var presenter = SelectionPresenter( interactor, navigator , scheduler , CompositeDisposable())
 
         presenter.onCreate()
         presenter.onViewAttached( view )
@@ -165,7 +166,7 @@ class SelectionPresenterTest {
     @Test
     fun disLikeAllArticles() {
 
-        var presenter = SelectionPresenter( interactor, navigator , scheduler )
+        var presenter = SelectionPresenter( interactor, navigator , scheduler , CompositeDisposable())
 
         presenter.onCreate()
         presenter.onViewAttached( view )

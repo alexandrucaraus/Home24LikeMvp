@@ -15,7 +15,8 @@ import eu.caraus.home24.application.ui.main.selection.SelectionContract
 import eu.caraus.home24.application.ui.main.selection.SelectionInteractor
 import eu.caraus.home24.application.ui.main.selection.SelectionNavigator
 import eu.caraus.home24.application.ui.main.selection.SelectionPresenter
-import eu.caraus.home24.application.ui.main.znav.MainNavigation
+import eu.caraus.home24.application.ui.main.znav.MainScreenFlow
+import io.reactivex.disposables.CompositeDisposable
 
 
 @Module
@@ -25,8 +26,8 @@ class MainActivityModule {
 
     @Provides
     @MainActivityScope
-    internal fun provideMainNavigation(activityView: MainActivity)
-            : MainNavigation = MainNavigation(activityView, R.id.main_fragment_container)
+    internal fun provideMainScreenFlow( activityView: MainActivity )
+            : MainScreenFlow = MainScreenFlow( activityView, R.id.main_fragment_container)
 
     @Provides
     @MainActivityScope
@@ -36,8 +37,8 @@ class MainActivityModule {
 
     @Provides
     @MainActivityScope
-    internal fun provideMainNavigator( navigation: MainNavigation)
-            : MainContract.Navigator = MainNavigator(navigation)
+    internal fun provideMainNavigator( screenFlow: MainScreenFlow )
+            : MainContract.Navigator = MainNavigator( screenFlow )
 
 
     // Selection
@@ -46,28 +47,35 @@ class MainActivityModule {
     @MainActivityScope
     internal fun provideSelectionPresenter( interactor : SelectionContract.Interactor,
                                             navigator  : SelectionContract.Navigator,
-                                            scheduler  : SchedulerProvider)
-            : SelectionContract.Presenter = SelectionPresenter( interactor, navigator, scheduler )
+                                            scheduler  : SchedulerProvider,
+                                            compositeDisposable: CompositeDisposable)
+            : SelectionContract.Presenter = SelectionPresenter( interactor, navigator, scheduler ,compositeDisposable)
 
 
     @Provides
     @MainActivityScope
-    internal fun provideSelectionInteractor( service: Home24Api, scheduler: SchedulerProvider )
-            : SelectionContract.Interactor = SelectionInteractor( service , scheduler )
+    internal fun provideSelectionInteractor( service: Home24Api,
+                                             scheduler: SchedulerProvider,
+                                             compositeDisposable: CompositeDisposable)
+            : SelectionContract.Interactor = SelectionInteractor( service , scheduler , compositeDisposable)
 
 
     @Provides
     @MainActivityScope
-    internal fun provideSelectionNavigator( navigation: MainNavigation )
-            : SelectionContract.Navigator = SelectionNavigator( navigation )
+    internal fun provideSelectionNavigator( screenFlow: MainScreenFlow )
+            : SelectionContract.Navigator = SelectionNavigator( screenFlow )
 
 
     // Review
 
     @Provides
     @MainActivityScope
-    internal fun provideReviewNavigator(navigation: MainNavigation)
-            : ReviewContract.Navigator = ReviewNavigator(navigation)
+    internal fun provideReviewNavigator(screenFlow: MainScreenFlow)
+            : ReviewContract.Navigator = ReviewNavigator(screenFlow)
 
+
+    @Provides
+    @MainActivityScope
+    internal fun provideCompositeDisposable() = CompositeDisposable()
 
 }

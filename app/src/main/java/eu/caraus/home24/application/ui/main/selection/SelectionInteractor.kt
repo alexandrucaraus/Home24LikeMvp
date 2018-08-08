@@ -5,6 +5,7 @@ import eu.caraus.home24.application.common.extensions.*
 import eu.caraus.home24.application.common.schedulers.SchedulerProvider
 import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.data.remote.home24.Home24Api
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.PublishSubject
 
 /**
@@ -14,7 +15,8 @@ import io.reactivex.subjects.PublishSubject
  */
 
 class SelectionInteractor( private val home24Api : Home24Api ,
-                           private val scheduler : SchedulerProvider ) : SelectionContract.Interactor {
+                           private val scheduler : SchedulerProvider,
+                           private val compositeDisposable: CompositeDisposable) : SelectionContract.Interactor {
 
     private val dataFetchResult = PublishSubject.create<Outcome<List<ArticlesItem?>>>()
 
@@ -35,7 +37,7 @@ class SelectionInteractor( private val home24Api : Home24Api ,
                 {
                     dataFetchResult.failed( it )
                 }
-        )
+        ).addTo( compositeDisposable )
 
     }
 
@@ -52,7 +54,7 @@ class SelectionInteractor( private val home24Api : Home24Api ,
                 {
                     dataFetchResult.failed( it )
                 }
-        )
+        ).addTo( compositeDisposable )
 
     }
 

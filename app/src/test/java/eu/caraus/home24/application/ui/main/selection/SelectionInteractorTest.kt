@@ -5,6 +5,7 @@ import eu.caraus.home24.application.AppModule
 import eu.caraus.home24.application.common.extensions.subOnIoObsOnUi
 import eu.caraus.home24.application.common.schedulers.TestSchedulerProvider
 import eu.caraus.home24.application.ui.main.zdi.MainActivityModule
+import io.reactivex.disposables.CompositeDisposable
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.not
 import org.junit.Assert.assertEquals
@@ -21,7 +22,7 @@ class SelectionInteractorTest {
     fun interactorTest() {
 
         var interactor
-            =  MainActivityModule().provideSelectionInteractor( service, scheduler )
+            =  MainActivityModule().provideSelectionInteractor( service, scheduler , CompositeDisposable())
 
         interactor.getArticlesOutcome().subOnIoObsOnUi(scheduler).subscribe {
 

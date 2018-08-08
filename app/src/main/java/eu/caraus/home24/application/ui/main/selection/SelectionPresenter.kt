@@ -4,6 +4,7 @@ import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.OnLifecycleEvent
 import eu.caraus.dynamo.application.common.retrofit.Outcome
 import eu.caraus.home24.application.common.Configuration
+import eu.caraus.home24.application.common.extensions.addTo
 import eu.caraus.home24.application.common.extensions.subOnIoObsOnUi
 
 import eu.caraus.home24.application.common.schedulers.SchedulerProvider
@@ -11,6 +12,7 @@ import eu.caraus.home24.application.data.domain.home24.ArticlesItem
 import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_LEFT
 import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_NONE
 import eu.caraus.home24.application.ui.main.selection.SelectionContract.Presenter.Companion.MODE_RIGHT
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
 /**
@@ -19,11 +21,10 @@ import io.reactivex.disposables.Disposable
 
 class SelectionPresenter( private val interactor : SelectionContract.Interactor,
                           private val navigator  : SelectionContract.Navigator,
-                          private val scheduler  : SchedulerProvider ) : SelectionContract.Presenter {
+                          private val scheduler  : SchedulerProvider ,
+                          private val compositeDisposable: CompositeDisposable) : SelectionContract.Presenter {
 
     private var view : SelectionContract.View? = null
-
-    private var disposable : Disposable? = null
 
     val articles = mutableListOf<ArticlesItem?>()
 
@@ -38,7 +39,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
 
-        disposable = interactor.getArticlesOutcome().subOnIoObsOnUi(scheduler).subscribe {
+        interactor.getArticlesOutcome().subOnIoObsOnUi(scheduler).subscribe {
 
             when( it ) {
 
@@ -56,7 +57,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
             }
 
-        }
+        }.addTo( compositeDisposable )
 
         interactor.getArticles( Configuration.NUMBER_OF_ITEMS_TO_REVIEW )
 
@@ -69,7 +70,7 @@ class SelectionPresenter( private val interactor : SelectionContract.Interactor,
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy() {
-        disposable?.dispose()
+        compositeDisposable.dispose()
     }
 
     override fun onViewAttached( view : SelectionContract.View ) {

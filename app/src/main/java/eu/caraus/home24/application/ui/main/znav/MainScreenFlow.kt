@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference
  *
  */
 
-class MainNavigation( activity: BaseActivity, @param:IdRes @field:IdRes private val containerId: Int) {
+class MainScreenFlow(activity: BaseActivity, @param:IdRes @field:IdRes private val containerId: Int) {
 
     private val refContext: WeakReference<Context> = WeakReference( activity )
 

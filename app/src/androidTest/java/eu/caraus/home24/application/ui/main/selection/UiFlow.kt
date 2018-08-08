@@ -37,7 +37,7 @@ class UiFlow {
     @get:Rule
     var mainActivityRule = ActivityTestRule(MainActivity::class.java)
 
-    val numberOfArticles = NUMBER_OF_ITEMS_TO_REVIEW
+    private val numberOfArticles = NUMBER_OF_ITEMS_TO_REVIEW
 
     @Test
     fun uiTestSimple() {
